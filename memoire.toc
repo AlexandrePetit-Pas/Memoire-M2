@@ -1,0 +1,10 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {french}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Arbre de décision}{7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Parcours d'arbre}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Optimisation des parcours}{11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Tentative d'implémentation du laziness dans les algorithmes}{13}% 
