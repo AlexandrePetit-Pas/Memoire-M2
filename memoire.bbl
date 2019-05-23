@@ -16,5 +16,248 @@
   {}
 \endgroup
 
-\datalist[entry]{none/global//global/global}\enddatalist
+\datalist[entry]{none/global//global/global}
+  \entry{decision_tree}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=HL}{%
+         family={Hawarah},
+         familyi={H\bibinitperiod},
+         given={Lamis},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HL1}
+    \strng{fullhash}{HL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Une approche probabiliste pour le classement d'objets
+  incomplètemet connus dans un arbre de décision}
+    \list{institution}{1}{%
+      {Université Joseph Fourier - Grenoble I}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2008}
+  \endentry
+
+  \entry{data_mining}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LDT}{%
+         family={Larose},
+         familyi={L\bibinitperiod},
+         given={Daniel\bibnamedelima T.},
+         giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley-Interscience}%
+    }
+    \strng{namehash}{LDT1}
+    \strng{fullhash}{LDT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Discovering knowledge in data: an introduction to data
+  mining}
+    \field{year}{2005}
+  \endentry
+
+  \entry{ant_colony}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KJ}{%
+         family={Kozak},
+         familyi={K\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KJ1}
+    \strng{fullhash}{KJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Decision tree and ensemble learning based on ant colony
+  optimization}
+    \field{year}{2019}
+  \endentry
+
+  \entry{algo_recherche}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=HP}{%
+         family={Habermehl},
+         familyi={H\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kesner},
+         familyi={K\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HPKD1}
+    \strng{fullhash}{HPKD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Algorithmes de recherche}
+    \field{year}{2004}
+  \endentry
+
+  \entry{ldt}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=FJH}{%
+         family={Friedman},
+         familyi={F\bibinitperiod},
+         given={Jerome\bibnamedelima H.},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kohavi},
+         familyi={K\bibinitperiod},
+         given={Ron},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yun},
+         familyi={Y\bibinitperiod},
+         given={Yeogirl},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FJHKRYY1}
+    \strng{fullhash}{FJHKRYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the Thirteenth National Conference on
+  Artificial Intelligence and Eighth Innovative Applications of Artificial
+  Intelligence Conference, {AAAI} 96, {IAAI} 96, Portland, Oregon, USA, August
+  4-8, 1996, Volume 1.}
+    \field{pages}{717\bibrangedash 724}
+    \field{title}{Lazy Decision Trees}
+    \field{year}{1996}
+  \endentry
+
+  \entry{batched_ldt}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GM}{%
+         family={Guillame{-}Bert},
+         familyi={G\bibinitperiod},
+         given={Mathieu},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dubrawski},
+         familyi={D\bibinitperiod},
+         given={Artur},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GMDA1}
+    \strng{fullhash}{GMDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Batched Lazy Decision Trees}
+    \field{volume}{abs/1603.02578}
+    \field{journaltitle}{CoRR}
+    \field{year}{2016}
+  \endentry
+
+  \entry{comp_id3_c45}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=EH}{%
+         family={Elaidi},
+         familyi={E\bibinitperiod},
+         given={Halima},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BZ}{%
+         family={Benabbou},
+         familyi={B\bibinitperiod},
+         given={Zahra},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=AH}{%
+         family={Abbar},
+         familyi={A\bibinitperiod},
+         given={Hassan},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EHBZAH1}
+    \strng{fullhash}{EHBZAH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the International Conference on Learning
+  and Optimization Algorithms: Theory and Applications, {LOPAL} 2018, Rabat,
+  Morocco, May 2-5, 2018.}
+    \field{pages}{26:1\bibrangedash 26:5}
+    \field{title}{A comparative study of algorithms constructing decision
+  trees: {ID3} and {C4.5}}
+    \field{year}{2018}
+  \endentry
+
+  \entry{induction_dt}{article}{}
+    \name{author}{1}{}{%
+      {{hash=QJR}{%
+         family={Quinlan},
+         familyi={Q\bibinitperiod},
+         given={J.\bibnamedelima Ross},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QJR1}
+    \strng{fullhash}{QJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{81\bibrangedash 106}
+    \field{title}{Induction of Decision Trees}
+    \field{volume}{1}
+    \field{journaltitle}{Machine Learning}
+    \field{year}{1986}
+  \endentry
+
+  \entry{simplifying_dt}{article}{}
+    \name{author}{1}{}{%
+      {{hash=QJR}{%
+         family={Quinlan},
+         familyi={Q\bibinitperiod},
+         given={J.\bibnamedelima Ross},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QJR1}
+    \strng{fullhash}{QJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{221\bibrangedash 234}
+    \field{title}{Simplifying Decision Trees}
+    \field{volume}{27}
+    \field{journaltitle}{International Journal of Man-Machine Studies}
+    \field{year}{1987}
+  \endentry
+
+  \entry{learning_dt}{article}{}
+    \name{author}{1}{}{%
+      {{hash=QJR}{%
+         family={Quinlan},
+         familyi={Q\bibinitperiod},
+         given={J.\bibnamedelima Ross},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QJR1}
+    \strng{fullhash}{QJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{71\bibrangedash 72}
+    \field{title}{Learning Decision Tree Classifiers}
+    \field{volume}{28}
+    \field{journaltitle}{{ACM} Comput. Surv.}
+    \field{year}{1996}
+  \endentry
+\enddatalist
 \endinput
