@@ -23,15 +23,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {\color {red}1.4.1}Attributs et classes}{9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {\color {red}1.4.2}Fonction de classement}{11}% 
+\contentsline {subsection}{\numberline {\color {red}1.4.2}Apprentissage supervisé}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {\color {red}1.4.3}Gain d'information}{11}% 
+\contentsline {subsection}{\numberline {\color {red}1.4.3}Fonction de classement}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {\color {red}1.4.4}Entropie}{11}% 
+\contentsline {subsection}{\numberline {\color {red}1.4.4}Gain d'information}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {\color {red}1.4.5}Information mutuelle}{11}% 
+\contentsline {subsection}{\numberline {\color {red}1.4.5}Entropie}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {\color {red}1.4.6}Exemple}{11}% 
+\contentsline {subsection}{\numberline {\color {red}1.4.6}Information mutuelle}{11}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}1.5}Arbre de décision pour l'optimisation}{11}% 
 \defcounter {refsection}{0}\relax 

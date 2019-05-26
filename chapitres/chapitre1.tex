@@ -36,7 +36,7 @@ A = (A \cap B) \cup (A \cap \overline{B}) \\
 \end{array}
 \right . 
 \end{equation}
-On peut alors déduire deux formules : le théorème de Bayes permettant de calculer \(P_B(A)\) et le théorème es probabilités totales qui permet de connaitre la valeur de \(P(A)\) à partir de deux événements A et B. 
+On peut alors déduire deux formules : le théorème de Bayes (1.4) permettant de calculer \(P_B(A)\) et le théorème es probabilités totales (1.5) qui permet de connaitre la valeur de \(P(A)\) à partir de deux événements A et B. 
 \begin{equation}
 P_B(A) = \frac{P(A \cap B)}{P(B)}
 \end{equation}
@@ -62,7 +62,7 @@ Pour construire un arbre de décision, une approche \textit{Top-Down} est utilis
 \end{enumerate}
 Lorsque chaque nœuds sont composés exactement de deux descendants (hors feuilles), on parle alors d'arbre de décision binaire. C'est un cas très largement utilisé des algorithmes de construction d'arbres tels que CART~\cite{ant_colony}, qui sera expliqué ultérieurement.
 \subsection{Exemple}
-Prenons comme exemple les données météorologiques~\cite{} présente dans la table 1. Cette table est constitué de différentes colonnes concernant différentes information ainsi qu'une colonne indiquant si la décision de sortir a été prise ou non. Dans un peu premier temps, il est possible de déduire les tests à réaliser comme par exemple "La température est-elle élevée ?" ou encore "Quel est le temps ?". A ces questions découlent des réponses possibles, \{oui, non\} pour la première et \{soleil, nuageux, pluie\} pour la deuxième. Une fois l'approche TDIDT utilisée, un arbre de décision est alors obtenu (figure 1.1).
+Prenons comme exemple les données météorologiques présente dans la table 1. Cette table est constitué de différentes colonnes concernant différentes information ainsi qu'une colonne indiquant si la décision de sortir a été prise ou non. Dans un peu premier temps, il est possible de déduire les tests à réaliser comme par exemple "La température est-elle élevée ?" ou encore "Quel est le temps ?". A ces questions découlent des réponses possibles, \{oui, non\} pour la première et \{soleil, nuageux, pluie\} pour la deuxième. Une fois l'approche \textit{TDIDT} utilisée, un arbre de décision est alors obtenu (figure 1.1).
 
 \begin{table}[!h]
 \footnotesize
@@ -106,11 +106,17 @@ Sortie\\
 \section{Arbre de décision pour le classement}
 		\subsection{Attributs et classes}
 Soit un ensemble d'observation \(S\) de taille \(n\):
-\[ S = \{s_1, s_2, ..., s_n\}. \]
+\begin{equation}
+S = \{s_1, s_2, ..., s_n\}.
+\end{equation}
 Chaque observation \(s_i\) est composée d'un ensemble de \(m\) attributs :
-\[ A_s = \{a_1, a_2, ..., a_m\}. \]
+\begin{equation}
+A_s = \{a_1, a_2, ..., a_m\}.
+\end{equation}
 Soit \(V_j\) l'ensemble de taille \(l\) des valeurs possibles de l'attribut \(a_j\) d'une observation \(s_i\) tels que :
-\[ V_j = \{ v_1, v_2, ..., v_l \}. \]
+\begin{equation}
+V_j = \{ v_1, v_2, ..., v_l \}.
+\end{equation}
 La valeur de l'attribut \(a_j\) sera représentée par \(v_k\).
 Un attribut est dit qualitatif si l'ensemble des valeurs possibles est symbolique (non numérique), par exemple si \(V_j\) représente les couleurs d'écriture d'un mot. On obtiendrait alors \( V_j = \{\) bleu, rouge, noir, vert \(\} \).\\
 
@@ -118,7 +124,7 @@ Une donnée est quantitative si l'ensemble des valeurs possibles est un ensemble
 \begin{itemize}
 \item Si un attribut peut prendre une infinité de valeurs dans son ensemble, alors celui-ci est qualifié de continu, par exemple le temps d'exécution d'un processus.
 \item Dans le cas contraire, une variable dite discrète possède une valeur finie. Elle est généralement liée à une énumération, comme par exemple le nombre de trait dans un caractère. 
-\end{itemize}\\
+\end{itemize}
 
 \(a_j\) est nominal si la notion d'ordre n'est pas présente dans l'ensemble des valeurs possibles, par exemple si \(V_j = \{\) un, deux, trois, quatre, cinq, six, sept, huit, neuf \(\} \) représente le nom d'un chiffre en toutes lettres.\\
 
@@ -126,13 +132,24 @@ Un attribut est ordinal si la notion les valeurs possibles contiennent la notion
 
 Une variable est qualifiée de binaire si l'ensemble \(V_j\) des valeurs possibles est de taille \(l=2\)\\
 
-La classe d'une observation correspond a une "catégorie" et permet de se rapprocher ou de se différencier des autres observations. Elle correspond à une feuille dans un arbre décisionnel.
+La classe d'une observation correspond a une "catégorie" et permet de se rapprocher ou de se différencier des autres observations. Elle correspond à une feuille dans un arbre décisionnel.\\
 
+Reprenons la table 1.1 (Météo), l'attribut jour correspond à l'identifiant dans l'observation et donc n'est pas pris en compte. \textit{Temps}, \textit{Température}, \textit{Humidité} et \textit{Vent} sont des attributs qualitatifs dont deux d'entre eux binaires : \(V_{Humidite} = \{haute, normale\}\) et \(V_{Vent} = \{oui, non\} \). Chaque observation possède une classe \textit{Sortie} pouvant prendre Y ou N comme valeur.
+		\subsection{Apprentissage supervisé}
+Le domaine de l'apprentissage peut se séparer en deux types : le supervisé et le non-supervisé. \\
+
+Dans le cas de l'apprentissage non-supervisé, le but recherché est d'assembler les similitudes entre les observations. Une des méthodes les plus communes est le \textit{clustering}~\cite{data_mining}.\\
+
+Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. C'est dans ce domaine que se situe les arbres de décision. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test.
 		\subsection{Fonction de classement}
+Soit C un ensemble de classe de taille n :
+\begin{equation}
+C = \{c_1, \cdots, c_n\}
+\end{equation}
+Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux.
+
 		\subsection{Gain d'information}
 		\subsection{Entropie}
 		\subsection{Information mutuelle}
-		\subsection{Apprentissage supervisé}
-		\subsection{Exemple}
 
 \section{Arbre de décision pour l'optimisation}

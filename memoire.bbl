@@ -93,5 +93,26 @@
   optimization}
     \field{year}{2019}
   \endentry
+
+  \entry{data_mining}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LDT}{%
+         family={Larose},
+         familyi={L\bibinitperiod},
+         given={Daniel\bibnamedelima T.},
+         giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley-Interscience}%
+    }
+    \strng{namehash}{LDT1}
+    \strng{fullhash}{LDT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Discovering knowledge in data: an introduction to data
+  mining}
+    \field{year}{2005}
+  \endentry
 \enddatalist
 \endinput
