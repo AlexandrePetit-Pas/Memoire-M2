@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  23 MAY 2019 22:05
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  26 MAY 2019 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,39 +982,77 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
 
 (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-))
-(./chapitres/chapitre2.tex [7] [8
+) [7]
+Overfull \hbox (5.78632pt too wide) in paragraph at lines 63--64
+\TU/Lato(0)/m/n/12 Lorsque chaque nœuds sont composés exactement de deux descen
+dants (hors feuilles),
+ []
+
+
+LaTeX Font Warning: Font shape `TU/Lato(0)/m/sc' undefined
+(Font)              using `TU/Lato(0)/m/n' instead on input line 97.
+
+[8]
+File: img/decision_tree_meteo.png Graphic file (type bmp)
+<img/decision_tree_meteo.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+) (./chapitres/chapitre2.tex [10] [11] [12
 
 ]
 Chapitre 2.
-) (./chapitres/chapitre3.tex [9] [10
+) (./chapitres/chapitre3.tex [13] [14
 
 ]
 Chapitre 3.
-) (./chapitres/chapitre4.tex [11] [12
+) (./chapitres/chapitre4.tex [15] [16
 
 ]
 Chapitre 4.
-) (./annexes/annexes.tex) [13] [14
+) (./annexes/annexes.tex) [17] [18
 
-]
+] [19] [20
 
-LaTeX Font Warning: Font shape `TU/Lato(0)/m/sc' undefined
-(Font)              using `TU/Lato(0)/m/n' instead on input line 179.
-
-[15] [16
-
-] (./memoire.toc)
+] (./memoire.toc [21])
 \tf@toc=\write4
 \openout4 = `memoire.toc'.
 
- [17] [18
-
-] (./memoire.lof)
+ [22]
+(./memoire.lof)
 \tf@lof=\write5
 \openout5 = `memoire.lof'.
 
- [19] (./memoire.aux)
+ [23
+
+] [24
+
+] (./memoire.lot)
+\tf@lot=\write6
+\openout6 = `memoire.lot'.
+
+ [25] (./memoire.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1023,12 +1061,12 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23199 strings out of 492933
- 459090 string characters out of 6136537
- 773195 words of memory out of 5000000
- 26947 multiletter control sequences out of 15000+600000
- 541351 words of font info for 77 fonts, out of 8000000 for 9000
+ 23210 strings out of 492933
+ 459005 string characters out of 6136537
+ 779195 words of memory out of 5000000
+ 26948 multiletter control sequences out of 15000+600000
+ 543074 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 39i,11n,67p,796b,4728s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,67p,796b,4763s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on memoire.pdf (23 pages).
+Output written on memoire.pdf (29 pages).
