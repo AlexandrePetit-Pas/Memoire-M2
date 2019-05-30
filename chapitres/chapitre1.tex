@@ -78,20 +78,20 @@ Humidité &
 Vent & 
 Sortie\\
 \hline
-1  & soleil  & élevée  & haute   & non & N \\
-2  & soleil  & élevée  & haute   & oui & N \\
-3  & soleil  & moyenne & haute   & non & N \\
-4  & soleil  & basse   & normale & non & Y \\
-5  & soleil  & moyenne & normale & oui & Y \\
-6  & nuageux & élevée  & haute   & non & Y \\
-7  & nuageux & basse   & normale & oui & Y \\
-8  & nuageux & moyenne & haute   & oui & Y \\
-9  & nuageux & élevée  & normale & non & Y \\
-10 & pluie   & moyenne & haute   & non & Y \\
-11 & pluie   & basse   & normale & non & Y \\
-12 & pluie   & basse   & normale & oui & N \\
-13 & pluie   & moyenne & normale & non & Y \\
-14 & pluie   & moyenne & haute   & oui & N \\
+1  & soleil  	& élevée	& haute  	& faible 	& N \\
+2  & soleil  	& élevée  	& haute   	& fort 		& N \\
+3  & nuageux  	& élevée 	& haute   	& faible 	& Y \\
+4  & pluie  	& moyenne   & haute 	& faible 	& Y \\
+5  & pluie  	& basse 	& normale 	& faible 	& Y \\
+6  & pluie		& basse		& normale   & fort 		& N \\
+7  & nuageux	& basse   	& normale 	& fort 		& Y \\
+8  & soleil 	& moyenne 	& haute   	& faible 	& N \\
+9  & soleil 	& basse  	& normale	& faibles 	& Y \\
+10 & pluie   	& moyenne 	& normale   & faible 	& Y \\
+11 & soleil  	& moyenne   & normale 	& fort	 	& Y \\
+12 & nuageux  	& moyenne   & haute 	& fort		& Y \\
+13 & nuageux   	& élevée 	& normale 	& faible 	& Y \\
+14 & pluie  	& moyenne	& haute   	& fort		& N \\
 \hline
 \end{tabular}
 \caption{Table Météo}
@@ -134,22 +134,61 @@ Une variable est qualifiée de binaire si l'ensemble \(V_j\) des valeurs possibl
 
 La classe d'une observation correspond a une "catégorie" et permet de se rapprocher ou de se différencier des autres observations. Elle correspond à une feuille dans un arbre décisionnel.\\
 
-Reprenons la table 1.1 (Météo), l'attribut jour correspond à l'identifiant dans l'observation et donc n'est pas pris en compte. \textit{Temps}, \textit{Température}, \textit{Humidité} et \textit{Vent} sont des attributs qualitatifs dont deux d'entre eux binaires : \(V_{Humidite} = \{haute, normale\}\) et \(V_{Vent} = \{oui, non\} \). Chaque observation possède une classe \textit{Sortie} pouvant prendre Y ou N comme valeur.
+Reprenons la table 1.1 (Météo), l'attribut jour correspond à l'identifiant dans l'observation et donc n'est pas pris en compte. \textit{Temps}, \textit{Température}, \textit{Humidité} et \textit{Vent} sont des attributs qualitatifs dont deux d'entre eux binaires : \(V_{Humidite} = \{haute, normale\}\) et \(V_{Vent} = \{fort, faible\} \). Chaque observation possède une classe \textit{Sortie} pouvant prendre Y ou N comme valeur.
 		\subsection{Apprentissage supervisé}
 Le domaine de l'apprentissage peut se séparer en deux types : le supervisé et le non-supervisé. \\
 
 Dans le cas de l'apprentissage non-supervisé, le but recherché est d'assembler les similitudes entre les observations. Une des méthodes les plus communes est le \textit{clustering}~\cite{data_mining}.\\
 
-Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. C'est dans ce domaine que se situe les arbres de décision. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test.
-		\subsection{Fonction de classement}
-Soit C un ensemble de classe de taille n :
+Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. C'est dans ce domaine que se situe les arbres de décision. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test. Soit C un ensemble de classe de taille n :
 \begin{equation}
 C = \{c_1, \cdots, c_n\}
 \end{equation}
-Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux.
+Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux par le biais d'une fonction de classement F, calculé grâce au jeu de données d'entrainement.
+		\subsection{Quantification de l'information}
+La quantification de l'information permet de dégager une composante importante des tests d'un arbre de décision : le manque d'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information h(x) d'une probabilité P(x) est une fonction croissante : si P(x) augmente, h(x) augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
 
-		\subsection{Gain d'information}
-		\subsection{Entropie}
-		\subsection{Information mutuelle}
+Afin de mesurer le gain d'information, il est nécessaire d'introduire le concept d'entropie correspondant à l'impureté d'une observation en théorie de l'information~\cite{theory_communication}. Soit \(S\) un ensemble d'observations de taille \(n\) où \(s_i = \{\text{Y}, \text{N}\}\). L'entropie \(E\) de \(S\), où \(p_Y\) correspond à la probabilité d'avoir \(Y\) et \(p_N\) d'avoir \(N\)~\cite{machine_learning}, est définie par \begin{equation}
+E(S) = - p_{Y}log_2p_{Y} - p_{N}log_2p_{N}
+\end{equation}
+La figure 1.2 représente la fonction d'entropie de S en fonction de $p_Y$. On observe que l'entropie est comprise entre 0 et 1 et vaut 0 lorsque $p_Y$ vaut 0 ou 1. Cela confirme le fait que les événements impossibles et certains n'apportent aucun gain d'information.\\
+
+Nous venons de montrer l'entropie de S pour un attribut binaire. Par extension, si une observation $s_i$ peut prendre $l$ valeurs, alors 
+\begin{equation}
+E(S) = \sum_{i=1}^{l} - p_ilog_2p_i
+\end{equation}
+
+\begin{figure}[!h]  
+\center
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $p_t$,
+    ylabel = {$E(S)$},
+]
+\addplot [
+    domain=0:1, 
+    samples=100, 
+    color=black,
+]
+{-x*log2(x) - (1-x)*log2(1-x) };
+\end{axis}
+\end{tikzpicture}
+\caption{Entropie de S en fonction de $p_t$}
+\end{figure}
+Par exemple, d'après la table 1.1, l'entropie de l'attribut sortie est égale à 
+\begin{equation}
+\begin{split}
+E(Sortie) & = -\frac{9}{14}log_2(\frac{9}{14}) - \frac{5}{14}log_2(\frac{5}{14})\\
+		  & = 0.4098 + 0.5305\\
+		  & = 0.940
+\end{split}
+\end{equation}
+
+GAIN
+ARBRE METEO
 
 \section{Arbre de décision pour l'optimisation}
+quand arrêter un arbre
+elagage
+optimisation d'algorithmes (boosted etc)

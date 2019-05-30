@@ -114,5 +114,60 @@
   mining}
     \field{year}{2005}
   \endentry
+
+  \entry{information_theory}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RS}{%
+         family={Roman},
+         familyi={R\bibinitperiod},
+         given={Steven},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RS1}
+    \strng{fullhash}{RS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{series}{Undergraduate texts in mathematics}
+    \field{title}{Introduction to coding and information theory}
+    \field{year}{1997}
+  \endentry
+
+  \entry{theory_communication}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=SCE}{%
+         family={Shannon},
+         familyi={S\bibinitperiod},
+         given={C.\bibnamedelima E.},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SCE1}
+    \strng{fullhash}{SCE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{The Bell System Technical Journal, Vol. 27}
+    \field{pages}{379\bibrangedash 423, 623\bibrangedash 656}
+    \field{title}{A Mathematical Theory of Communication}
+    \field{year}{1948}
+  \endentry
+
+  \entry{machine_learning}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MTM}{%
+         family={Mitchell},
+         familyi={M\bibinitperiod},
+         given={Tom\bibnamedelima M.},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MTM1}
+    \strng{fullhash}{MTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{series}{McGraw-Hill Series in Computer Science}
+    \field{title}{Machine Learning, International Edition}
+    \field{year}{1997}
+  \endentry
 \enddatalist
 \endinput
