@@ -230,11 +230,10 @@ Une première méthode de post-élagage est le \textit{reduced error pruning} (Q
 
 Le \textit{pessimistic error pruning} est une méthode d'élagage proposée par Quinlan~\cite{simplifying_dt}. Elle remplace le nombre J d'observations mal classées sur une feuille par $J + \frac{1}{2}$. D'après lui, le rapport $\frac{J}{K}$ d'observations mal classées, où K est le nombre d'observations sur une feuille, est une estimation optimiste pas assez fiable, c'est pourquoi il a choisi de la remplacer par une distribution binomiale~\cite{machine_learning, simplifying_dt}.\\
 
+La troisième méthode de post-élagage est le \textit{cost complexity pruning}. Elle consiste à construire une séquence d'arbre $T_0, T_1, \dots, T_L$ en minimisant la valeur de $\alpha$ correspondant à la moyenne du nombre d'observations mal classées par feuille, $T_0$ étant l'arbre initial et $T_L$ l'arbre final. $T_{i+1}$ est obtenu en élaguant tous les nœuds de $T_i$ qui ont la plus petite valeur de $\alpha$~\cite{comparative_pruning}. 
 
-cost complexity pruning
-minimum error pruning
-
-
+Enfin, le \textit{minimum error pruning} permet de minimiser le taux d'erreur attendu d'un sous-arbre élagué. Si celui-ci est inférieur au taux d'erreur du sous-arbre sans élagage, alors le nœud sera remplacé par une feuille. Ce taux d'erreur est définit par \begin{equation} E_k = \frac{(n - n_j + k - 1)}{n + k} \end{equation} où $n$ correspond au nombre d'observations dans une feuille, $n_j$ observations appartenant à la classe $j$ et $k$ le nombre de valeurs de la classe~\cite{comparative_pruning}.
 
 
 \subsection{Méthodes d'amélioration}
+TODO : bagging, boosting et Genetic
