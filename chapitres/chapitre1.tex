@@ -14,7 +14,7 @@ Une expérience est dire aléatoire si les résultats possibles sont connus à l
 		\subsection{Événements}
 Un événement correspond à un ensemble de résultats possibles pour une expérience. Si cet ensemble est constitué d'un seul élément, on parle alors d'événement élémentaire. Si l'ensemble de résultats est égal à l'univers \(\Omega\), alors l'événement est dit certain. En revanche, si aucun résultat n'est présent (ensemble \(\emptyset\)), alors c'est un événement impossible.
 		\subsection{Probabilités}
-Une probabilité est une fonction qui à un événement A, associe un poids.
+Une probabilité est une fonction qui à un événement $A$, associe un poids.
 \begin{equation}
 \left \{
 \begin{array}{l}
@@ -26,7 +26,7 @@ P(\bigcup_{i=1}^n A_i) = \sum_{i=1}^n P(A_i)
 \right . 
 \end{equation}
 Plus la probabilité est proche de 1, plus il est possible que l'événement se réalise.
-Soit A et B deux événements quelconques, \(P(A)\) est dite conditionnelle si son résultat est influencé par l'événement B :
+Soit $A$ et $B$ deux événements quelconques, \(P(A)\) est dite conditionnelle si son résultat est influencé par l'événement $B$ :
 \begin{equation} 
 \left \{
 \begin{array}{l}
@@ -36,7 +36,7 @@ A = (A \cap B) \cup (A \cap \overline{B}) \\
 \end{array}
 \right . 
 \end{equation}
-On peut alors déduire deux formules : le théorème de Bayes (1.4) permettant de calculer \(P_B(A)\) et le théorème es probabilités totales (1.5) qui permet de connaitre la valeur de \(P(A)\) à partir de deux événements A et B. 
+On peut alors déduire deux formules : le théorème de Bayes (1.4) permettant de calculer \(P_B(A)\) et le théorème es probabilités totales (1.5) qui permet de connaitre la valeur de \(P(A)\) à partir de deux événements $A$ et $B$. 
 \begin{equation}
 P_B(A) = \frac{P(A \cap B)}{P(B)}
 \end{equation}
@@ -140,13 +140,13 @@ Le domaine de l'apprentissage peut se séparer en deux types : le supervisé et 
 
 Dans le cas de l'apprentissage non-supervisé, le but recherché est d'assembler les similitudes entre les observations. Une des méthodes les plus communes est le \textit{clustering}~\cite{data_mining}.\\
 
-Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. C'est dans ce domaine que se situe les arbres de décision. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test. Soit C un ensemble de classe de taille n :
+Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. C'est dans ce domaine que se situe les arbres de décision. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test. Soit $C$ un ensemble de classe de taille $n$ :
 \begin{equation}
 C = \{c_1, \cdots, c_n\}
 \end{equation}
-Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux par le biais d'une fonction de classement F, calculé grâce au jeu de données d'entrainement.
+Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux par le biais d'une fonction de classement $F$, calculé grâce au jeu de données d'entrainement.
 		\subsection{Quantification de l'information}
-La composante principale des arbres de décision et la quantification de l'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information h(x) d'une probabilité P(x) est une fonction croissante : si P(x) augmente, h(x) augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
+La composante principale des arbres de décision et la quantification de l'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information $h(x)$ d'une probabilité $P(x)$ est une fonction croissante : si $P(x)$ augmente, $h(x)$ augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
 
 Afin de mesurer le gain d'information, il est nécessaire d'introduire le concept d'entropie correspondant à l'impureté d'une observation en théorie de l'information~\cite{theory_communication}. Soit \(S\) un ensemble d'observations de taille \(n\) où \(s_i = \{\text{Y}, \text{N}\}\). L'entropie \(E\) de \(S\), où \(p_Y\) correspond à la probabilité d'avoir \(Y\) et \(p_N\) d'avoir \(N\)~\cite{machine_learning}, est définie par \begin{equation}
 E(S) = - p_{Y}log_2p_{Y} - p_{N}log_2p_{N}
@@ -169,10 +169,10 @@ La figure 1.2 représente la fonction d'entropie de S en fonction de $p_Y$. On o
 {-x*log2(x) - (1-x)*log2(1-x) };
 \end{axis}
 \end{tikzpicture}
-\caption{Entropie de S en fonction de $p_t$}
+\caption{Entropie de $S$ en fonction de $p_t$}
 \end{figure}
 
-Nous venons de montrer l'entropie de S pour un attribut binaire. Par extension, si une observation $s_i$ peut prendre $l$ valeurs, alors 
+Nous venons de montrer l'entropie de $S$ pour un attribut binaire. Par extension, si une observation $s_i$ peut prendre $l$ valeurs, alors 
 \begin{equation}
 E(S) = \sum_{i=1}^{l} - p_ilog_2p_i
 \end{equation}
@@ -204,7 +204,7 @@ D'après les résultats obtenus :\\ \( G(S, Temps) > G(S, Humidite) > G(S, Vent)
 
 \section{Arbre de décision pour l'optimisation}
 \subsection{Problème d'\textit{overfitting}}
-Un des problèmes principal des arbres de décision est le sur-ajustement (\textit{overfitting}) : la taille d'un arbre augmente linéairement avec la taille du jeu de données d'apprentissage. Ce principe d'\textit{overfitting} peut être définit de la manière suivante : \textit{soit H un espace d'hypothèses et h $\in$ H, h sur-ajuste le jeu d'apprentissage s'il existe une alternative h' $\in$ H, tel que h a une marge d'erreur plus petite que h' sur les jeux d'apprentissage, mais une marge d'erreur plus grande sur la totalité du jeux de données.}~\cite{machine_learning} On peut voir sur la figure 1.3 que plus la précision du jeu d'apprentissage augmente, plus la précision du jeu de test diminue. C'est pourquoi des méthodes d'élagage et d'amélioration d'arbre sont mises en place afin de minimiser ce problème.
+Un des problèmes principal des arbres de décision est le sur-ajustement (\textit{overfitting}) : la taille d'un arbre augmente linéairement avec la taille du jeu de données d'apprentissage. Ce principe d'\textit{overfitting} peut être définit de la manière suivante : \textit{soit $H$ un espace d'hypothèses et $h \in H$, h sur-ajuste le jeu d'apprentissage s'il existe une alternative $h' \in H$, tel que h a une marge d'erreur plus petite que $h'$ sur les jeux d'apprentissage, mais une marge d'erreur plus grande sur la totalité du jeux de données.}~\cite{machine_learning} On peut voir sur la figure 1.3 que plus la précision du jeu d'apprentissage augmente, plus la précision du jeu de test diminue. C'est pourquoi des méthodes d'élagage et d'amélioration d'arbre sont mises en place afin de minimiser ce problème.
 
 \begin{figure}[]
 	\centering
@@ -228,7 +228,7 @@ Contrairement au pré-élagage, le post-élagage se place une fois la constructi
 
 Une première méthode de post-élagage est le \textit{reduced error pruning} (Quinlan~\cite{simplifying_dt}). Elle compare le nombre d'erreur de classement entre le sous-arbre $T_t$ intact et le sous-arbre $T_t'$ lorsque que $t$ est transformé en feuille. Si $T_t'$ est plus performant, alors $T_t$ est élagué et $t$ devient une feuille de l'arbre.\\
 
-Le \textit{pessimistic error pruning} est une méthode d'élagage proposée par Quinlan~\cite{simplifying_dt}. Elle remplace le nombre J d'observations mal classées sur une feuille par $J + \frac{1}{2}$. D'après lui, le rapport $\frac{J}{K}$ d'observations mal classées, où K est le nombre d'observations sur une feuille, est une estimation optimiste pas assez fiable, c'est pourquoi il a choisi de la remplacer par une distribution binomiale~\cite{machine_learning, simplifying_dt}.\\
+Le \textit{pessimistic error pruning} est une méthode d'élagage proposée par Quinlan~\cite{simplifying_dt}. Elle remplace le nombre $J$ d'observations mal classées sur une feuille par $J + \frac{1}{2}$. D'après lui, le rapport $\frac{J}{K}$ d'observations mal classées, où K est le nombre d'observations sur une feuille, est une estimation optimiste pas assez fiable, c'est pourquoi il a choisi de la remplacer par une distribution binomiale~\cite{machine_learning, simplifying_dt}.\\
 
 La troisième méthode de post-élagage est le \textit{cost complexity pruning}. Elle consiste à construire une séquence d'arbre $T_0, T_1, \dots, T_L$ en minimisant la valeur de $\alpha$ correspondant à la moyenne du nombre d'observations mal classées par feuille, $T_0$ étant l'arbre initial et $T_L$ l'arbre final. $T_{i+1}$ est obtenu en élaguant tous les nœuds de $T_i$ qui ont la plus petite valeur de $\alpha$~\cite{comparative_pruning}. 
 
