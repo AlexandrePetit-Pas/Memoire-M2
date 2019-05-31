@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  30 MAY 2019 17:20
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  31 MAY 2019 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1425,40 +1425,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
-) (./chapitres/chapitre2.tex [12]
-Chapitre 2.
-) (./chapitres/chapitre3.tex [13
 
-] [14
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+[12]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 209.
+
+File: img/overfitting.png Graphic file (type bmp)
+<img/overfitting.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+[14]) (./chapitres/chapitre2.tex [15] [16
+
+]
+Chapitre 2.
+) (./chapitres/chapitre3.tex [17] [18
 
 ]
 Chapitre 3.
-) (./chapitres/chapitre4.tex [15] [16
+) (./chapitres/chapitre4.tex [19] [20
 
 ]
 Chapitre 4.
-) (./annexes/annexes.tex) [17] [18
+) (./annexes/annexes.tex) [21] [22
 
-] [19] [20
+] [23] [24
 
-] (./memoire.toc)
+] (./memoire.toc [25])
 \tf@toc=\write5
 \openout5 = `memoire.toc'.
 
- [21] [22
-
-]
+ [26]
 (./memoire.lof)
 \tf@lof=\write6
 \openout6 = `memoire.lof'.
 
- [23] [24
+ [27
+
+] [28
 
 ] (./memoire.lot)
 \tf@lot=\write7
 \openout7 = `memoire.lot'.
 
- [25] (./memoire.aux)
+ [29] (./memoire.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1467,12 +1494,12 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43106 strings out of 492933
- 1014468 string characters out of 6136537
- 1383931 words of memory out of 5000000
- 46492 multiletter control sequences out of 15000+600000
- 543074 words of font info for 88 fonts, out of 8000000 for 9000
+ 43119 strings out of 492933
+ 1014933 string characters out of 6136537
+ 1385515 words of memory out of 5000000
+ 46503 multiletter control sequences out of 15000+600000
+ 543082 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,15n,96p,796b,4776s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,15n,96p,914b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on memoire.pdf (29 pages).
+Output written on memoire.pdf (33 pages).

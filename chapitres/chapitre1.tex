@@ -86,7 +86,7 @@ Sortie\\
 6  & pluie		& basse		& normale   & fort 		& N \\
 7  & nuageux	& basse   	& normale 	& fort 		& Y \\
 8  & soleil 	& moyenne 	& haute   	& faible 	& N \\
-9  & soleil 	& basse  	& normale	& faibles 	& Y \\
+9  & soleil 	& basse  	& normale	& faible 	& Y \\
 10 & pluie   	& moyenne 	& normale   & faible 	& Y \\
 11 & soleil  	& moyenne   & normale 	& fort	 	& Y \\
 12 & nuageux  	& moyenne   & haute 	& fort		& Y \\
@@ -146,17 +146,12 @@ C = \{c_1, \cdots, c_n\}
 \end{equation}
 Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux par le biais d'une fonction de classement F, calculé grâce au jeu de données d'entrainement.
 		\subsection{Quantification de l'information}
-La quantification de l'information permet de dégager une composante importante des tests d'un arbre de décision : le manque d'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information h(x) d'une probabilité P(x) est une fonction croissante : si P(x) augmente, h(x) augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
+La composante principale des arbres de décision et la quantification de l'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information h(x) d'une probabilité P(x) est une fonction croissante : si P(x) augmente, h(x) augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
 
 Afin de mesurer le gain d'information, il est nécessaire d'introduire le concept d'entropie correspondant à l'impureté d'une observation en théorie de l'information~\cite{theory_communication}. Soit \(S\) un ensemble d'observations de taille \(n\) où \(s_i = \{\text{Y}, \text{N}\}\). L'entropie \(E\) de \(S\), où \(p_Y\) correspond à la probabilité d'avoir \(Y\) et \(p_N\) d'avoir \(N\)~\cite{machine_learning}, est définie par \begin{equation}
 E(S) = - p_{Y}log_2p_{Y} - p_{N}log_2p_{N}
 \end{equation}
 La figure 1.2 représente la fonction d'entropie de S en fonction de $p_Y$. On observe que l'entropie est comprise entre 0 et 1 et vaut 0 lorsque $p_Y$ vaut 0 ou 1. Cela confirme le fait que les événements impossibles et certains n'apportent aucun gain d'information.\\
-
-Nous venons de montrer l'entropie de S pour un attribut binaire. Par extension, si une observation $s_i$ peut prendre $l$ valeurs, alors 
-\begin{equation}
-E(S) = \sum_{i=1}^{l} - p_ilog_2p_i
-\end{equation}
 
 \begin{figure}[!h]  
 \center
@@ -176,6 +171,12 @@ E(S) = \sum_{i=1}^{l} - p_ilog_2p_i
 \end{tikzpicture}
 \caption{Entropie de S en fonction de $p_t$}
 \end{figure}
+
+Nous venons de montrer l'entropie de S pour un attribut binaire. Par extension, si une observation $s_i$ peut prendre $l$ valeurs, alors 
+\begin{equation}
+E(S) = \sum_{i=1}^{l} - p_ilog_2p_i
+\end{equation}
+
 Par exemple, d'après la table 1.1, l'entropie de l'attribut sortie est égale à 
 \begin{equation}
 \begin{split}
@@ -185,10 +186,55 @@ E(Sortie) & = -\frac{9}{14}log_2(\frac{9}{14}) - \frac{5}{14}log_2(\frac{5}{14})
 \end{split}
 \end{equation}
 
-GAIN
-ARBRE METEO
+A partir de cet entropie, il est possible d'obtenir une mesure appelée gain d'information. Celle-ci correspond à la réduction de l'entropie et permet de quantifier l'apport en information lors du choix d'un test. Elle est définie~\cite{machine_learning} par 
+\begin{equation}
+G(S, A) = E(S) - \sum_{v \in V_A}^{}\frac{|S_v|}{|S|}E(S_v)
+\end{equation}
+
+Par exemple, afin de créer l'arbre de décision de la table Météo, il faut déterminer l'attribut qui sera la racine de l'arbre. Pour cela, il faut déterminer quel attribut maximise le gain d'information :\\
+\begin{equation}
+\begin{split}
+& G(S, Temps) = E(S) - \frac{5}{14}E(S_{T, Soleil}) - \frac{4}{14}E(S_{T, Nuageux}) - \frac{5}{14}E(S_{T, Pluie}) = 0.246\\
+& G(S, Temper) = E(S) - \frac{4}{14}E(S_{Tp, Elev}) - \frac{6}{14}E(S_{Tp, Moy}) - \frac{4}{14}E(S_{Tp, Basse}) = 0.030\\
+& G(S, Humidite) = E(S) - \frac{7}{14}E(S_{H, Haute}) - \frac{7}{14}E(S_{H, Normale}) = 0.152\\
+& G(S, Vent) = E(S) - \frac{6}{14}E(S_{V, Fort}) - \frac{8}{14}E(S_{V, Faible}) = 0.048\\
+\end{split}
+\end{equation}
+D'après les résultats obtenus :\\ \( G(S, Temps) > G(S, Humidite) > G(S, Vent) > G(S, Temperature) \). L'attribut \textit{Temps} sera donc choisi comme racine de l'arbre de décision. Ce processus sera ensuite répété pour chaque nouveau nœud crée jusqu'à ce que toutes les feuilles soit atteintes (figure 1.1).
 
 \section{Arbre de décision pour l'optimisation}
-quand arrêter un arbre
-elagage
-optimisation d'algorithmes (boosted etc)
+\subsection{Problème d'\textit{overfitting}}
+Un des problèmes principal des arbres de décision est le sur-ajustement (\textit{overfitting}) : la taille d'un arbre augmente linéairement avec la taille du jeu de données d'apprentissage. Ce principe d'\textit{overfitting} peut être définit de la manière suivante : \textit{soit H un espace d'hypothèses et h $\in$ H, h sur-ajuste le jeu d'apprentissage s'il existe une alternative h' $\in$ H, tel que h a une marge d'erreur plus petite que h' sur les jeux d'apprentissage, mais une marge d'erreur plus grande sur la totalité du jeux de données.}~\cite{machine_learning} On peut voir sur la figure 1.3 que plus la précision du jeu d'apprentissage augmente, plus la précision du jeu de test diminue. C'est pourquoi des méthodes d'élagage et d'amélioration d'arbre sont mises en place afin de minimiser ce problème.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[scale=0.5]{img/overfitting.png}
+	\caption{Overfitting d'un arbre de décision sur une base de données médicales afin de déterminer si les patients sont atteints de diabète.~\cite{machine_learning}}
+\end{figure}
+
+\subsection{Élagage}
+\subsubsection{Pré-élagage}
+Le pré-élagage consiste à arrêter prématurément la construction de l'arbre même si chaque feuille ne correspondent pas à une et seulement une classe. Certains nœuds ne seront alors pas plus développés, selon différents critères d'arrêt choisi au préalable.\\
+
+Une première méthode consiste à définir un nombre d'objets minimum par nœud. Si lors de la création de nouveaux nœuds, l'un deux ne dépasse pas le seuil, alors ceux-ci ne sont pas créés et le nœud parent devient une feuille de l'arbre. Une deuxième méthode utilise le test du $\chi^2$ afin de déterminer s'il est statistiquement pertinent de sélectionner un attribut pour construire la suite de l'arbre. Il existe par ailleurs d'autre méthodes qui consiste à définir des seuils pour arrêter la construction~\cite{decision_tree, pruning}.
+\begin{itemize}
+\item Le seuil maximum de feuilles a été atteint.
+\item Le seuil maximum d'attributs a été franchi.
+\item Le gain d'information est inférieur à celui fixé. 
+\end{itemize}
+
+\subsubsection{Post-élagage}
+Contrairement au pré-élagage, le post-élagage se place une fois la construction de l'arbre faite. L'objectif est de supprimer des sous-ensemble de l'arbre afin de les remplacer par des feuilles en minimisant l'impact sur le taux d'erreur, voire réduire le taux d'erreur. Il existe différentes manières d'élaguer un arbre de décision, quatre d'entre-elles seront étudiées~\cite{comparative_pruning}.\\
+
+Une première méthode de post-élagage est le \textit{reduced error pruning} (Quinlan~\cite{simplifying_dt}). Elle compare le nombre d'erreur de classement entre le sous-arbre $T_t$ intact et le sous-arbre $T_t'$ lorsque que $t$ est transformé en feuille. Si $T_t'$ est plus performant, alors $T_t$ est élagué et $t$ devient une feuille de l'arbre.\\
+
+Le \textit{pessimistic error pruning} est une méthode d'élagage proposée par Quinlan~\cite{simplifying_dt}. Elle remplace le nombre J d'observations mal classées sur une feuille par $J + \frac{1}{2}$. D'après lui, le rapport $\frac{J}{K}$ d'observations mal classées, où K est le nombre d'observations sur une feuille, est une estimation optimiste pas assez fiable, c'est pourquoi il a choisi de la remplacer par une distribution binomiale~\cite{machine_learning, simplifying_dt}.\\
+
+
+cost complexity pruning
+minimum error pruning
+
+
+
+
+\subsection{Méthodes d'amélioration}

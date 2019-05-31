@@ -27,34 +27,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {\color {red}1.4.3}Quantification de l'information}{11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}1.5}Arbre de décision pour l'optimisation}{12}% 
+\contentsline {section}{\numberline {\color {red}1.5}Arbre de décision pour l'optimisation}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Lazy Decision Tree}{13}% 
+\contentsline {subsection}{\numberline {\color {red}1.5.1}Problème d'\textit {overfitting}}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}2.1}Lazy Decision Tree pour le classement}{13}% 
+\contentsline {subsection}{\numberline {\color {red}1.5.2}Élagage}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}2.2}Lazy Decision Tree pour l'optimisation}{13}% 
+\contentsline {subsubsection}{Pré-élagage}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Classement supervisé}{15}% 
+\contentsline {subsubsection}{Post-élagage}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.1}K Nearest Neighbors}{15}% 
+\contentsline {subsection}{\numberline {\color {red}1.5.3}Méthodes d'amélioration}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.2}CART}{15}% 
+\contentsline {chapter}{\numberline {2}Lazy Decision Tree}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.3}C4.5}{15}% 
+\contentsline {section}{\numberline {\color {red}2.1}Lazy Decision Tree pour le classement}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.4}A *}{15}% 
+\contentsline {section}{\numberline {\color {red}2.2}Lazy Decision Tree pour l'optimisation}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{17}% 
+\contentsline {chapter}{\numberline {3}Classement supervisé}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.1}Définition du MNIST}{17}% 
+\contentsline {section}{\numberline {\color {red}3.1}K Nearest Neighbors}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.2}Méthode de recherche}{17}% 
+\contentsline {section}{\numberline {\color {red}3.2}CART}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.3}Algorithme de classement}{17}% 
+\contentsline {section}{\numberline {\color {red}3.3}C4.5}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.4}Algorithme Lazy}{17}% 
+\contentsline {section}{\numberline {\color {red}3.4}A *}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.5}Comparaison des résultats}{17}% 
+\contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliographie}{19}% 
+\contentsline {section}{\numberline {\color {red}4.1}Définition du MNIST}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.2}Méthode de recherche}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.3}Algorithme de classement}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.4}Algorithme Lazy}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.5}Comparaison des résultats}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliographie}{23}% 

@@ -169,5 +169,85 @@
     \field{title}{Machine Learning, International Edition}
     \field{year}{1997}
   \endentry
+
+  \entry{pruning}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PN}{%
+         family={Patel},
+         familyi={P\bibinitperiod},
+         given={Nikita},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=US}{%
+         family={Upadhyay},
+         familyi={U\bibinitperiod},
+         given={Saurabh},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PNUS1}
+    \strng{fullhash}{PNUS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Study of Various Decision Tree Pruning Methods with their
+  Empirical Comparison in WEKA}
+    \field{journaltitle}{International Journal of Computer Applications, Volume
+  60}
+    \field{year}{2012}
+  \endentry
+
+  \entry{comparative_pruning}{article}{}
+    \name{author}{3}{}{%
+      {{hash=EF}{%
+         family={Esposito},
+         familyi={E\bibinitperiod},
+         given={Floriana},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Malerba},
+         familyi={M\bibinitperiod},
+         given={Donato},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Semeraro},
+         familyi={S\bibinitperiod},
+         given={Giovanni},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EFMDSG1}
+    \strng{fullhash}{EFMDSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{476\bibrangedash 491}
+    \field{title}{A Comparative Analysis of Methods for Pruning Decision Trees}
+    \field{volume}{19}
+    \field{journaltitle}{{IEEE} Trans. Pattern Anal. Mach. Intell.}
+    \field{year}{1997}
+  \endentry
+
+  \entry{simplifying_dt}{article}{}
+    \name{author}{1}{}{%
+      {{hash=QJR}{%
+         family={Quinlan},
+         familyi={Q\bibinitperiod},
+         given={J.\bibnamedelima Ross},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QJR1}
+    \strng{fullhash}{QJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{221\bibrangedash 234}
+    \field{title}{Simplifying Decision Trees}
+    \field{volume}{27}
+    \field{journaltitle}{International Journal of Man-Machine Studies}
+    \field{year}{1987}
+  \endentry
 \enddatalist
 \endinput
