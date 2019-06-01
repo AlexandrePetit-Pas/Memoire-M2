@@ -47,24 +47,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Classement supervisé}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.1}K Nearest Neighbors}{19}% 
+\contentsline {section}{\numberline {\color {red}3.1}Introduction}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.2}CART}{19}% 
+\contentsline {section}{\numberline {\color {red}3.2}K Nearest Neighbors}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.3}C4.5}{19}% 
+\contentsline {subsection}{\numberline {\color {red}3.2.1}Concept}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.4}A *}{19}% 
+\contentsline {subsection}{\numberline {\color {red}3.2.2}Choix de k}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{21}% 
+\contentsline {section}{\numberline {\color {red}3.3}CART}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.1}Définition du MNIST}{21}% 
+\contentsline {section}{\numberline {\color {red}3.4}ID3}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.2}Méthode de recherche}{21}% 
+\contentsline {section}{\numberline {\color {red}3.5}C4.5}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.3}Algorithme de classement}{21}% 
+\contentsline {section}{\numberline {\color {red}3.6}A *}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.4}Algorithme Lazy}{21}% 
+\contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.5}Comparaison des résultats}{21}% 
+\contentsline {section}{\numberline {\color {red}4.1}Définition du MNIST}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliographie}{23}% 
+\contentsline {section}{\numberline {\color {red}4.2}Méthode de recherche}{23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.3}Algorithme de classement}{23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.4}Algorithme Lazy}{23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.5}Comparaison des résultats}{23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliographie}{25}% 

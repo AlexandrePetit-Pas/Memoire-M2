@@ -1,7 +1,44 @@
 \documentclass[memoire.tex]{subfiles}
 
 \chapter{Classement supervisé}
+\section{Introduction}
+Il existe de nombreuses méthodes de classement supervisé. L'objectif est d'analyse les algorithmes les plus importants et utilisés afin de mettre en avant la partie mise en œuvre de l'apprentissage supervisé et de comprendre le fonctionnement de chacun. La première méthode est le \textit{K-Nearest Neighbors}, suivie de CART, puis de ID3 et C4.5 pour finir par A*.
+
 \section{K Nearest Neighbors}
+\subsection{Concept}
+La méthode des k plus proches voisins (\textit{K-Nearest Neighbors ou K-NN} est une méthode d'apprentissage supervisée. Elle peut s'utiliser de différente manière, l'une étant pour le classement. \textit{Le problème des K-NN est de créer une structure de données pour un ensemble d'objets qui, étant donné un objet q, son plus proche voisin dans l'ensemble peut être trouver rapidement}.~\cite{knn} L'objectif est de placer les observations du jeu d'apprentissage sur un espace métrique. Naturellement, ces observations seront majoritairement regroupés vers un même espace. Lors de l'ajout d'une nouvelle instance, l'algorithme va analyser quels sont ses $k$ voisins les plus proches afin de déterminer la classe à attribuer.\\
+
+La figure 3.1 montre un ensemble de données\footnote{Disponible à l'adresse : \url{https://www.kaggle.com/alqamahjsr/topic-3-decision-trees-and-knn}} contenant deux attributs $x \in [0, 30]$ et $y \in [0, 30]$ et deux classes, l'une rouge et l'autre jaune. Il est clairement visible que les points rouges se trouvent sur la partie supérieure gauche du graphique tandis que les points jaunes, sur la partie inférieure droite (figure 3.2). Si une nouvelle instance apparaissait, $\forall k \in \mathbb{N}$, celle-ci serait relativement simple à classer.\\
+
+En revanche, avec \textit{K-NN}, le choix du $k$ est arbitraire et celui-ci peut influencer le résultat obtenu.
+
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{img/knn.png}
+     \caption{Représentation graphique de points ayant pour classe "rouge" ou "jaune"}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{img/knn2.png}
+     \caption{Séparation des données par leur classe}
+   \end{minipage}
+\end{figure}
+
+\subsection{Choix de k}
+$k$ est une valeur arbitraire choisie avant le lancement de l'algorithme. Cette valeur permet de choisir le nombre de voisins à regarder afin de déterminer la classe d'une observation. Cela signifie que si $k$ est trop petit, l'algorithme retournera la valeur de l'observation la plus proche. Un petit $k$ générera alors un modèle trop précis, qui engendrera un problème d'\textit{overfitting}. Dans le cas contraire, un trop grand $k$ pourrait réduire la précision du modèle et rendre le comportement du modèle trop abstrait.\\
+
+Par exemple, la figures 3.3\footnote{Antti Ajanki AnAj - Own work, CC BY-SA 3.0, \url{https://commons.wikimedia.org/w/index.php?curid=2170282}} met en avant le problème du choix de $k$. Cette figure possède une observation de test (cercle vert) à classer soit en carré bleu, soit en triangle rouge. Dans le premier cas, $k = 3$, l'algorithme va donc regarder les trois voisins les plus proche du cercle : deux triangles rouges et un carré bleu et déduire que l'observation est un triangle rouge. Dans le deuxième cas, $k = 5$, les cinq plus proches voisins sont deux triangles rouges et trois triangles bleus : l'observation sera alors un carré bleu. Dans cet exemple, un $k$ trop grand a changer la classe en carré bleu alors que celle-ci semble être plus proche des triangles rouge.\\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.15]{img/knnk.png}
+	\caption{Exemple de K-NN avec deux valeurs différentes de $k$}
+\end{figure}
+
+Afin d'améliorer \textit{K-NN}, il est possible de donner un poids aux voisins et aux attributs. Ainsi, un voisin proche aura plus d'importance qu'un voisin éloigné qui risque de ne pas être de la même classe. Par ailleurs, un attribut n'étant pas pertinent aura beaucoup moins d'importance qu'un attribut aidant au classement~\cite{data_mining}.
+
 \section{CART}
+\section{ID3}
 \section{C4.5}
 \section{A *}

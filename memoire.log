@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  31 MAY 2019 16:40
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  1 JUN 2019 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1465,32 +1465,96 @@ Chapitre 2.
 
 ]
 Chapitre 3.
-) (./chapitres/chapitre4.tex [19] [20
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Package fontspec Info: Font family 'Lato(1)' created for font 'Lato' with
+(fontspec)             options
+(fontspec)             [Ligatures=TeX,Mapping=tex-text,VerticalPosition=Superio
+r].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Lato/OT:script=latn;language=DFLT;+sups;mapping=tex-
+text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
+(fontspec)             <->"Lato/B/OT:script=latn;language=DFLT;+sups;mapping=te
+x-text;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Lato/I/OT:script=latn;language=DFLT;+sups;mapping=te
+x-text;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
+(fontspec)             <->"Lato/BI/OT:script=latn;language=DFLT;+sups;mapping=t
+ex-text;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[][][]\TU/Lato(0)/m/n/10 .[]Disponible à l’adresse : $[][][][][] [] [] [] [][][
+] [] [][][][][][] [] [][][] [] [][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+File: img/knn.png Graphic file (type bmp)
+<img/knn.png>
+File: img/knn2.png Graphic file (type bmp)
+<img/knn2.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+File: img/knnk.png Graphic file (type bmp)
+<img/knnk.png>
+[20]) (./chapitres/chapitre4.tex [21] [22
 
 ]
 Chapitre 4.
-) (./annexes/annexes.tex) [21] [22
+) (./annexes/annexes.tex) [23] [24
 
-] [23] [24
+]
+Overfull \hbox (11.47571pt too wide) in paragraph at lines 181--181
+[]\TU/Lato(0)/m/sc/12 Jorge Moraleda. “Gregory Shakhnarovich, Trevor Darrell an
+d Piotr Indyk : Nearest-
+ []
 
-] (./memoire.toc [25])
+[25] [26
+
+] (./memoire.toc [27])
 \tf@toc=\write5
 \openout5 = `memoire.toc'.
 
- [26]
-(./memoire.lof)
+ [28] (./memoire.lof)
 \tf@lof=\write6
 \openout6 = `memoire.lof'.
 
- [27
+ [29
 
-] [28
+] [30
 
 ] (./memoire.lot)
 \tf@lot=\write7
 \openout7 = `memoire.lot'.
 
- [29] (./memoire.aux)
+
+[31] (./memoire.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1499,12 +1563,12 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43119 strings out of 492933
- 1014933 string characters out of 6136537
- 1385555 words of memory out of 5000000
- 46503 multiletter control sequences out of 15000+600000
- 543082 words of font info for 89 fonts, out of 8000000 for 9000
+ 43154 strings out of 492933
+ 1015805 string characters out of 6136537
+ 1385950 words of memory out of 5000000
+ 46531 multiletter control sequences out of 15000+600000
+ 543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,15n,96p,918b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,15n,96p,920b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on memoire.pdf (33 pages).
+Output written on memoire.pdf (35 pages).

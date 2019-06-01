@@ -249,5 +249,27 @@
     \field{journaltitle}{International Journal of Man-Machine Studies}
     \field{year}{1987}
   \endentry
+
+  \entry{knn}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MJ}{%
+         family={Moraleda},
+         familyi={M\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJ1}
+    \strng{fullhash}{MJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{221\bibrangedash 222}
+    \field{title}{Gregory Shakhnarovich, Trevor Darrell and Piotr Indyk:
+  Nearest-Neighbors Methods in Learning and Vision. Theory and Practice}
+    \field{volume}{11}
+    \field{journaltitle}{Pattern Anal. Appl.}
+    \field{year}{2008}
+  \endentry
 \enddatalist
 \endinput
