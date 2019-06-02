@@ -271,5 +271,44 @@
     \field{journaltitle}{Pattern Anal. Appl.}
     \field{year}{2008}
   \endentry
+
+  \entry{cart}{book}{}
+    \name{author}{4}{}{%
+      {{hash=BL}{%
+         family={Breiman},
+         familyi={B\bibinitperiod},
+         given={Leo},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FJH}{%
+         family={Friedman},
+         familyi={F\bibinitperiod},
+         given={J.\bibnamedelima H.},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=ORA}{%
+         family={Olshen},
+         familyi={O\bibinitperiod},
+         given={R.\bibnamedelima A.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SCJ}{%
+         family={Stone},
+         familyi={S\bibinitperiod},
+         given={C.\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wadsworth}%
+    }
+    \strng{namehash}{BL+1}
+    \strng{fullhash}{BLFJHORASCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{0-534-98053-8}
+    \field{title}{Classification and Regression Trees}
+    \field{year}{1984}
+  \endentry
 \enddatalist
 \endinput

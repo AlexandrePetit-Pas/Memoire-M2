@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  1 JUN 2019 16:22
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  2 JUN 2019 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1351,9 +1351,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [4
 
-]) (./chapitres/chapitre1.tex [5] [6
-
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+) [5] (./chapitres/chapitre1.tex [6]
 Chapitre 1.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 3.
 (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
@@ -1363,7 +1376,9 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
 
 (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) [7]
+) [7
+
+]
 Overfull \hbox (5.78632pt too wide) in paragraph at lines 63--64
 \TU/Lato(0)/m/n/12 Lorsque chaque nœuds sont composés exactement de deux descen
 dants (hors feuilles),
@@ -1512,6 +1527,9 @@ File: img/knn.png Graphic file (type bmp)
 File: img/knn2.png Graphic file (type bmp)
 <img/knn2.png>
 
+LaTeX Warning: Citation 'data_minig' on page 19 undefined on input line 29.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -1558,15 +1576,23 @@ d Piotr Indyk : Nearest-
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                memoire
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'memoire.run.xml'.
 \openout1 = `memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43154 strings out of 492933
- 1015805 string characters out of 6136537
- 1385950 words of memory out of 5000000
- 46531 multiletter control sequences out of 15000+600000
+ 43156 strings out of 492933
+ 1015879 string characters out of 6136537
+ 1386501 words of memory out of 5000000
+ 46533 multiletter control sequences out of 15000+600000
  543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,15n,96p,920b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s

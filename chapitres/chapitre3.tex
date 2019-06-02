@@ -26,9 +26,9 @@ En revanche, avec \textit{K-NN}, le choix du $k$ est arbitraire et celui-ci peut
 \end{figure}
 
 \subsection{Choix de k}
-$k$ est une valeur arbitraire choisie avant le lancement de l'algorithme. Cette valeur permet de choisir le nombre de voisins à regarder afin de déterminer la classe d'une observation. Cela signifie que si $k$ est trop petit, l'algorithme retournera la valeur de l'observation la plus proche. Un petit $k$ générera alors un modèle trop précis, qui engendrera un problème d'\textit{overfitting}. Dans le cas contraire, un trop grand $k$ pourrait réduire la précision du modèle et rendre le comportement du modèle trop abstrait.\\
+$k$ est une valeur arbitraire choisie avant le lancement de l'algorithme. Cette valeur permet de choisir le nombre de voisins à regarder afin de déterminer la classe d'une observation. Cela signifie que si $k$ est trop petit, l'algorithme retournera la valeur de l'observation la plus proche. Un petit $k$ générera alors un modèle trop précis, qui engendrera un problème d'\textit{overfitting}. Dans le cas contraire, un trop grand $k$ pourrait réduire la précision du modèle et rendre le comportement du modèle trop abstrait~\cite{data_minig}.\\
 
-Par exemple, la figures 3.3\footnote{Antti Ajanki AnAj - Own work, CC BY-SA 3.0, \url{https://commons.wikimedia.org/w/index.php?curid=2170282}} met en avant le problème du choix de $k$. Cette figure possède une observation de test (cercle vert) à classer soit en carré bleu, soit en triangle rouge. Dans le premier cas, $k = 3$, l'algorithme va donc regarder les trois voisins les plus proche du cercle : deux triangles rouges et un carré bleu et déduire que l'observation est un triangle rouge. Dans le deuxième cas, $k = 5$, les cinq plus proches voisins sont deux triangles rouges et trois triangles bleus : l'observation sera alors un carré bleu. Dans cet exemple, un $k$ trop grand a changer la classe en carré bleu alors que celle-ci semble être plus proche des triangles rouge.\\
+Par exemple, la figure 3.3\footnote{Antti Ajanki AnAj - Own work, CC BY-SA 3.0, \url{https://commons.wikimedia.org/w/index.php?curid=2170282}} met en avant le problème du choix de $k$. Cette figure possède une observation de test (cercle vert) à classer soit en carré bleu, soit en triangle rouge. Dans le premier cas, $k = 3$, l'algorithme va donc regarder les trois voisins les plus proche du cercle : deux triangles rouges et un carré bleu et déduire que l'observation est un triangle rouge. Dans le deuxième cas, $k = 5$, les cinq plus proches voisins sont deux triangles rouges et trois triangles bleus : l'observation sera alors un carré bleu. Dans cet exemple, un $k$ trop grand a changer la classe en carré bleu alors que celle-ci semble être plus proche des triangles rouge.\\
 
 \begin{figure}[!h]
 	\centering
@@ -38,7 +38,15 @@ Par exemple, la figures 3.3\footnote{Antti Ajanki AnAj - Own work, CC BY-SA 3.0,
 
 Afin d'améliorer \textit{K-NN}, il est possible de donner un poids aux voisins et aux attributs. Ainsi, un voisin proche aura plus d'importance qu'un voisin éloigné qui risque de ne pas être de la même classe. Par ailleurs, un attribut n'étant pas pertinent aura beaucoup moins d'importance qu'un attribut aidant au classement~\cite{data_mining}.
 
+
 \section{CART}
+\textit{Classification And Regression Trees} (CART) est une méthode développée par~\citeauthor{cart}~\cite{cart}. Cette approche permet de créer des arbres binaires (chaque nœud a deux descendants directs). Chaque test, ou \textit{split}, correspond à la question binaire qui maximise la réduction de l'entropie. Pour cela, l'algorithme va parcourir tous les attributs de chaque nœud et garder le meilleur pour en dégager le \textit{split} maximisant la réduction de l'entropie. Il va ensuite comparer les \textit{splits} pour garder le meilleur.
+
+\begin{figure}
+algo
+\end{figure}
+
+
 \section{ID3}
 \section{C4.5}
 \section{A *}

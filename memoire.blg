@@ -18,47 +18,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: memoire-blx.bib
 Database file #2: bibliographie/bibliographie.bib
+Warning--I didn't find a database entry for "data_minig"
 Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 13 entries,
+You've used 14 entries,
             6304 wiz_defined-function locations,
-            1246 strings with 10286 characters,
-and the built_in function-call counts, 52650 in all, are:
-= -- 3425
-> -- 1062
-< -- 279
-+ -- 985
-- -- 327
-* -- 3343
-:= -- 5050
+            1253 strings with 10424 characters,
+and the built_in function-call counts, 61761 in all, are:
+= -- 4197
+> -- 1167
+< -- 304
++ -- 1205
+- -- 363
+* -- 4037
+:= -- 6112
 add.period$ -- 0
-call.type$ -- 13
-change.case$ -- 152
+call.type$ -- 14
+change.case$ -- 169
 chr.to.int$ -- 34
-cite$ -- 24
-duplicate$ -- 5484
-empty$ -- 5294
-format.name$ -- 588
-if$ -- 11221
+cite$ -- 26
+duplicate$ -- 6326
+empty$ -- 6130
+format.name$ -- 666
+if$ -- 13052
 int.to.chr$ -- 0
-int.to.str$ -- 27
+int.to.str$ -- 30
 missing$ -- 0
-newline$ -- 269
-num.names$ -- 530
-pop$ -- 4051
+newline$ -- 308
+num.names$ -- 580
+pop$ -- 4432
 preamble$ -- 1
-purify$ -- 197
+purify$ -- 223
 quote$ -- 0
-skip$ -- 1923
+skip$ -- 2089
 stack$ -- 0
-substring$ -- 5465
-swap$ -- 1323
-text.length$ -- 244
+substring$ -- 7019
+swap$ -- 1475
+text.length$ -- 264
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 429
+type$ -- 463
 warning$ -- 0
-while$ -- 652
+while$ -- 779
 width$ -- 0
-write$ -- 257
+write$ -- 295
+(There was 1 warning)
