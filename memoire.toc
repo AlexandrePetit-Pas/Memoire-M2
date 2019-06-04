@@ -57,11 +57,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}3.3}CART}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.4}ID3}{21}% 
+\contentsline {section}{\numberline {\color {red}3.4}C4.5}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.5}C4.5}{21}% 
+\contentsline {section}{\numberline {\color {red}3.5}ID3}{22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.6}A *}{21}% 
+\contentsline {section}{\numberline {\color {red}3.6}A *}{22}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{23}% 
 \defcounter {refsection}{0}\relax 

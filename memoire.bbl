@@ -310,5 +310,26 @@
     \field{title}{Classification and Regression Trees}
     \field{year}{1984}
   \endentry
+
+  \entry{c4.5}{book}{}
+    \name{author}{1}{}{%
+      {{hash=QJR}{%
+         family={Quinlan},
+         familyi={Q\bibinitperiod},
+         given={J.\bibnamedelima Ross},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Morgan Kaufmann}%
+    }
+    \strng{namehash}{QJR1}
+    \strng{fullhash}{QJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{1-55860-238-0}
+    \field{title}{{C4.5:} Programs for Machine Learning}
+    \field{year}{1993}
+  \endentry
 \enddatalist
 \endinput

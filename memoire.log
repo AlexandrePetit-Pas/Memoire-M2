@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  2 JUN 2019 16:56
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  4 JUN 2019 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -870,19 +870,77 @@ File: tikzlibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
 tex
 File: pgflibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) (c:/texlive/2018/texmf-dist/tex/latex/sectsty/sectsty.sty
+))) (c:/texlive/2018/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count308
+
+(c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip64
+
+(c:/texlive/2018/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count309
+)
+(c:/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip65
+\skiplinenumber=\skip66
+\skiprule=\skip67
+\skiphlne=\skip68
+\skiptext=\skip69
+\skiplength=\skip70
+\algomargin=\skip71
+\skipalgocfslide=\skip72
+\algowidth=\dimen286
+\inoutsize=\dimen287
+\inoutindent=\dimen288
+\interspacetitleruled=\dimen289
+\interspacealgoruled=\dimen290
+\interspacetitleboxruled=\dimen291
+\algocf@ruledwidth=\skip73
+\algocf@inoutbox=\box65
+\algocf@inputbox=\box66
+\AlCapSkip=\skip74
+\AlCapHSkip=\skip75
+\algoskipindent=\skip76
+\algocf@nlbox=\box67
+\algocf@hangingbox=\box68
+\algocf@untilbox=\box69
+\algocf@skipuntil=\skip77
+\algocf@capbox=\box70
+\algocf@lcaptionbox=\skip78
+\algoheightruledefault=\skip79
+\algoheightrule=\skip80
+\algotitleheightruledefault=\skip81
+\algotitleheightrule=\skip82
+\c@algocfline=\count310
+\c@algocfproc=\count311
+\c@algocf=\count312
+\algocf@algoframe=\box71
+\algocf@algobox=\box72
+)
+(c:/texlive/2018/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
 (c:/texlive/2018/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
-\RW=\skip64
-\mylen=\skip65
-\myhi=\skip66
-\px=\skip67
-\py=\skip68
-\pyy=\skip69
-\pxx=\skip70
+\RW=\skip83
+\mylen=\skip84
+\myhi=\skip85
+\px=\skip86
+\py=\skip87
+\pyy=\skip88
+\pxx=\skip89
 )
 (c:/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
@@ -905,7 +963,7 @@ Package pdftexcmds Info: \pdfdraftmode not found.
 )
 (c:/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count308
+\etb@tempcnta=\count313
 )
 (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -922,72 +980,69 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (c:/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count309
+\lrq@indent=\count314
 
 (c:/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
 (c:/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count310
-\c@listtotal=\count311
-\c@listcount=\count312
-\c@liststart=\count313
-\c@liststop=\count314
-\c@citecount=\count315
-\c@citetotal=\count316
-\c@multicitecount=\count317
-\c@multicitetotal=\count318
-\c@instcount=\count319
-\c@maxnames=\count320
-\c@minnames=\count321
-\c@maxitems=\count322
-\c@minitems=\count323
-\c@citecounter=\count324
-\c@maxcitecounter=\count325
-\c@savedcitecounter=\count326
-\c@uniquelist=\count327
-\c@uniquename=\count328
-\c@refsection=\count329
-\c@refsegment=\count330
-\c@maxextratitle=\count331
-\c@maxextratitleyear=\count332
-\c@maxextraname=\count333
-\c@maxextradate=\count334
-\c@maxextraalpha=\count335
-\c@abbrvpenalty=\count336
-\c@highnamepenalty=\count337
-\c@lownamepenalty=\count338
-\c@maxparens=\count339
-\c@parenlevel=\count340
-\blx@tempcnta=\count341
-\blx@tempcntb=\count342
-\blx@tempcntc=\count343
-\blx@maxsection=\count344
-\blx@maxsegment@0=\count345
-\blx@notetype=\count346
-\blx@parenlevel@text=\count347
-\blx@parenlevel@foot=\count348
-\blx@sectionciteorder@0=\count349
-\blx@entrysetcounter=\count350
-\labelnumberwidth=\skip71
-\labelalphawidth=\skip72
-\biblabelsep=\skip73
-\bibitemsep=\skip74
-\bibnamesep=\skip75
-\bibinitsep=\skip76
-\bibparsep=\skip77
-\bibhang=\skip78
+\c@tabx@nest=\count315
+\c@listtotal=\count316
+\c@listcount=\count317
+\c@liststart=\count318
+\c@liststop=\count319
+\c@citecount=\count320
+\c@citetotal=\count321
+\c@multicitecount=\count322
+\c@multicitetotal=\count323
+\c@instcount=\count324
+\c@maxnames=\count325
+\c@minnames=\count326
+\c@maxitems=\count327
+\c@minitems=\count328
+\c@citecounter=\count329
+\c@maxcitecounter=\count330
+\c@savedcitecounter=\count331
+\c@uniquelist=\count332
+\c@uniquename=\count333
+\c@refsection=\count334
+\c@refsegment=\count335
+\c@maxextratitle=\count336
+\c@maxextratitleyear=\count337
+\c@maxextraname=\count338
+\c@maxextradate=\count339
+\c@maxextraalpha=\count340
+\c@abbrvpenalty=\count341
+\c@highnamepenalty=\count342
+\c@lownamepenalty=\count343
+\c@maxparens=\count344
+\c@parenlevel=\count345
+\blx@tempcnta=\count346
+\blx@tempcntb=\count347
+\blx@tempcntc=\count348
+\blx@maxsection=\count349
+\blx@maxsegment@0=\count350
+\blx@notetype=\count351
+\blx@parenlevel@text=\count352
+\blx@parenlevel@foot=\count353
+\blx@sectionciteorder@0=\count354
+\blx@entrysetcounter=\count355
+\labelnumberwidth=\skip90
+\labelalphawidth=\skip91
+\biblabelsep=\skip92
+\bibitemsep=\skip93
+\bibnamesep=\skip94
+\bibinitsep=\skip95
+\bibparsep=\skip96
+\bibhang=\skip97
 \blx@bcfin=\read4
 \blx@bcfout=\write4
-\c@mincomprange=\count351
-\c@maxcomprange=\count352
-\c@mincompwidth=\count353
+\c@mincomprange=\count356
+\c@maxcomprange=\count357
+\c@mincompwidth=\count358
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -996,88 +1051,88 @@ File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count354
-\c@savedafterword=\count355
-\c@annotator=\count356
-\c@savedannotator=\count357
-\c@author=\count358
-\c@savedauthor=\count359
-\c@bookauthor=\count360
-\c@savedbookauthor=\count361
-\c@commentator=\count362
-\c@savedcommentator=\count363
-\c@editor=\count364
-\c@savededitor=\count365
-\c@editora=\count366
-\c@savededitora=\count367
-\c@editorb=\count368
-\c@savededitorb=\count369
-\c@editorc=\count370
-\c@savededitorc=\count371
-\c@foreword=\count372
-\c@savedforeword=\count373
-\c@holder=\count374
-\c@savedholder=\count375
-\c@introduction=\count376
-\c@savedintroduction=\count377
-\c@namea=\count378
-\c@savednamea=\count379
-\c@nameb=\count380
-\c@savednameb=\count381
-\c@namec=\count382
-\c@savednamec=\count383
-\c@translator=\count384
-\c@savedtranslator=\count385
-\c@shortauthor=\count386
-\c@savedshortauthor=\count387
-\c@shorteditor=\count388
-\c@savedshorteditor=\count389
-\c@labelname=\count390
-\c@savedlabelname=\count391
-\c@institution=\count392
-\c@savedinstitution=\count393
-\c@lista=\count394
-\c@savedlista=\count395
-\c@listb=\count396
-\c@savedlistb=\count397
-\c@listc=\count398
-\c@savedlistc=\count399
-\c@listd=\count400
-\c@savedlistd=\count401
-\c@liste=\count402
-\c@savedliste=\count403
-\c@listf=\count404
-\c@savedlistf=\count405
-\c@location=\count406
-\c@savedlocation=\count407
-\c@organization=\count408
-\c@savedorganization=\count409
-\c@origlocation=\count410
-\c@savedoriglocation=\count411
-\c@origpublisher=\count412
-\c@savedorigpublisher=\count413
-\c@publisher=\count414
-\c@savedpublisher=\count415
-\c@language=\count416
-\c@savedlanguage=\count417
-\c@origlanguage=\count418
-\c@savedoriglanguage=\count419
-\c@pageref=\count420
-\c@savedpageref=\count421
-\shorthandwidth=\skip79
-\shortjournalwidth=\skip80
-\shortserieswidth=\skip81
-\shorttitlewidth=\skip82
-\shortauthorwidth=\skip83
-\shorteditorwidth=\skip84
-\locallabelnumberwidth=\skip85
-\locallabelalphawidth=\skip86
-\localshorthandwidth=\skip87
-\localshortjournalwidth=\skip88
-\localshortserieswidth=\skip89
-\localshorttitlewidth=\skip90
-\localshortauthorwidth=\skip91
-\localshorteditorwidth=\skip92
+\c@afterword=\count359
+\c@savedafterword=\count360
+\c@annotator=\count361
+\c@savedannotator=\count362
+\c@author=\count363
+\c@savedauthor=\count364
+\c@bookauthor=\count365
+\c@savedbookauthor=\count366
+\c@commentator=\count367
+\c@savedcommentator=\count368
+\c@editor=\count369
+\c@savededitor=\count370
+\c@editora=\count371
+\c@savededitora=\count372
+\c@editorb=\count373
+\c@savededitorb=\count374
+\c@editorc=\count375
+\c@savededitorc=\count376
+\c@foreword=\count377
+\c@savedforeword=\count378
+\c@holder=\count379
+\c@savedholder=\count380
+\c@introduction=\count381
+\c@savedintroduction=\count382
+\c@namea=\count383
+\c@savednamea=\count384
+\c@nameb=\count385
+\c@savednameb=\count386
+\c@namec=\count387
+\c@savednamec=\count388
+\c@translator=\count389
+\c@savedtranslator=\count390
+\c@shortauthor=\count391
+\c@savedshortauthor=\count392
+\c@shorteditor=\count393
+\c@savedshorteditor=\count394
+\c@labelname=\count395
+\c@savedlabelname=\count396
+\c@institution=\count397
+\c@savedinstitution=\count398
+\c@lista=\count399
+\c@savedlista=\count400
+\c@listb=\count401
+\c@savedlistb=\count402
+\c@listc=\count403
+\c@savedlistc=\count404
+\c@listd=\count405
+\c@savedlistd=\count406
+\c@liste=\count407
+\c@savedliste=\count408
+\c@listf=\count409
+\c@savedlistf=\count410
+\c@location=\count411
+\c@savedlocation=\count412
+\c@organization=\count413
+\c@savedorganization=\count414
+\c@origlocation=\count415
+\c@savedoriglocation=\count416
+\c@origpublisher=\count417
+\c@savedorigpublisher=\count418
+\c@publisher=\count419
+\c@savedpublisher=\count420
+\c@language=\count421
+\c@savedlanguage=\count422
+\c@origlanguage=\count423
+\c@savedoriglanguage=\count424
+\c@pageref=\count425
+\c@savedpageref=\count426
+\shorthandwidth=\skip98
+\shortjournalwidth=\skip99
+\shortserieswidth=\skip100
+\shorttitlewidth=\skip101
+\shortauthorwidth=\skip102
+\shorteditorwidth=\skip103
+\locallabelnumberwidth=\skip104
+\locallabelalphawidth=\skip105
+\localshorthandwidth=\skip106
+\localshortjournalwidth=\skip107
+\localshortserieswidth=\skip108
+\localshorttitlewidth=\skip109
+\localshortauthorwidth=\skip110
+\localshorteditorwidth=\skip111
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1103,13 +1158,13 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (c:/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count422
-\c@textcitetotal=\count423
-\c@textcitemaxnames=\count424
-\c@biburlnumpenalty=\count425
-\c@biburlucpenalty=\count426
-\c@biburllcpenalty=\count427
-\c@smartand=\count428
+\c@textcitecount=\count427
+\c@textcitetotal=\count428
+\c@textcitemaxnames=\count429
+\c@biburlnumpenalty=\count430
+\c@biburlucpenalty=\count431
+\c@biburllcpenalty=\count432
+\c@smartand=\count433
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1121,8 +1176,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (c:/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count429
-\c@bbx:relatedtotal=\count430
+\c@bbx:relatedcount=\count434
+\c@bbx:relatedtotal=\count435
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1182,8 +1237,8 @@ File: french.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count431
-\@quotereset=\count432
+\@quotelevel=\count436
+\@quotereset=\count437
 (./memoire.aux)
 \openout1 = `memoire.aux'.
 
@@ -1527,9 +1582,6 @@ File: img/knn.png Graphic file (type bmp)
 File: img/knn2.png Graphic file (type bmp)
 <img/knn2.png>
 
-LaTeX Warning: Citation 'data_minig' on page 19 undefined on input line 29.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -1541,11 +1593,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
 File: img/knnk.png Graphic file (type bmp)
 <img/knnk.png>
-[20]) (./chapitres/chapitre4.tex [21] [22
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
-]
+ []
+
+[21]) (./chapitres/chapitre4.tex [22]
 Chapitre 4.
-) (./annexes/annexes.tex) [23] [24
+) (./annexes/annexes.tex) [23
+
+] [24
 
 ]
 Overfull \hbox (11.47571pt too wide) in paragraph at lines 181--181
@@ -1572,29 +1629,27 @@ d Piotr Indyk : Nearest-
 \openout7 = `memoire.lot'.
 
 
-[31] (./memoire.aux)
+[31] [32
+
+] (./memoire.loa)
+\tf@loa=\write8
+\openout8 = `memoire.loa'.
+
+ [33] (./memoire.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                memoire
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'memoire.run.xml'.
 \openout1 = `memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43156 strings out of 492933
- 1015879 string characters out of 6136537
- 1386501 words of memory out of 5000000
- 46533 multiletter control sequences out of 15000+600000
+ 44102 strings out of 492933
+ 1031299 string characters out of 6136537
+ 1411757 words of memory out of 5000000
+ 47463 multiletter control sequences out of 15000+600000
  543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,15n,96p,920b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,16n,96p,1011b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on memoire.pdf (35 pages).
+Output written on memoire.pdf (37 pages).
