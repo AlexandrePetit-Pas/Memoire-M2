@@ -65,14 +65,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.1}Définition du MNIST}{23}% 
+\contentsline {section}{\numberline {\color {red}4.1}Introduction}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.2}Méthode de recherche}{23}% 
+\contentsline {section}{\numberline {\color {red}4.2}Définition du MNIST}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.3}Algorithme de classement}{23}% 
+\contentsline {section}{\numberline {\color {red}4.3}Méthode de recherche}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.4}Algorithme Lazy}{23}% 
+\contentsline {section}{\numberline {\color {red}4.4}Algorithme de classement}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.5}Comparaison des résultats}{23}% 
+\contentsline {section}{\numberline {\color {red}4.5}Algorithme Lazy}{24}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {\color {red}4.6}Comparaison des résultats}{24}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliographie}{25}% 

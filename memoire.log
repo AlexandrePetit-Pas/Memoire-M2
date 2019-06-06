@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  4 JUN 2019 20:51
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  6 JUN 2019 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1367,7 +1367,13 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'memoire.bbl' found.
-(./memoire.bbl)
+(./memoire.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'mnist':
+(biblatex)                - Invalid format of field 'month'.
+
+)
 Package biblatex Info: Reference section=0 on input line 79.
 Package biblatex Info: Reference segment=0 on input line 79.
 
@@ -1600,17 +1606,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
 [21]) (./chapitres/chapitre4.tex [22]
 Chapitre 4.
-) (./annexes/annexes.tex) [23
 
-] [24
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+File: img/5.png Graphic file (type bmp)
+<img/5.png>
+) (./annexes/annexes.tex)
+Underfull \vbox (badness 6094) has occurred while \output is active []
+
+ [23
 
 ]
+[24]
 Overfull \hbox (11.47571pt too wide) in paragraph at lines 181--181
 []\TU/Lato(0)/m/sc/12 Jorge Moraleda. “Gregory Shakhnarovich, Trevor Darrell an
 d Piotr Indyk : Nearest-
  []
 
-[25] [26
+[25
+
+] [26
 
 ] (./memoire.toc [27])
 \tf@toc=\write5
@@ -1644,10 +1661,10 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44102 strings out of 492933
- 1031299 string characters out of 6136537
- 1411757 words of memory out of 5000000
- 47463 multiletter control sequences out of 15000+600000
+ 44110 strings out of 492933
+ 1031498 string characters out of 6136537
+ 1412690 words of memory out of 5000000
+ 47470 multiletter control sequences out of 15000+600000
  543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,16n,96p,1011b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
