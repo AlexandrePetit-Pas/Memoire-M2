@@ -70,12 +70,12 @@ Chaque possibilité sera étudiée ce qui peut augmenter rapidement la complexit
 \section{C4.5}
 C4.5 est un algorithme inventé par~\citeauthor{c4.5}~\cite{c4.5}. Comme pour CART, l'algorithme va parcourir chaque nœud récursivement et trouver le meilleur \textit{split} à chaque fois. Cependant, celui-ci ne se limite pas aux arbres binaires et peut donc avoir \textit{n} nœuds descendants. Pour des attributs qualitatifs, une branche sera créée pour chaque valeur possible. Pour choisir le meilleur \textit{split}, l'algorithme va utiliser le gain d'information (équation 1.13).\\
 
-Une fois l'arbre construit, une fonction d'élagage est alors appelée afin d'améliorer les résultats. Cette méthode est appelée \textit{error-based pruning} est une amélioration du \textit{pessimistic pruning}~\cite{c4.5}. Selon Quinlan, $E$ objets mal classés sur $N$ observations amènent à un taux d'erreur optimiste de $\frac{E}{N}$. La borne supérieur $U_{CF}(E, N)$ de l'indice de confiance $CF$ peut être trouvée selon les limites de confiances de la distribution binomiale~\cite{c4.5}, ce qui correspond au taux d'erreur prédit pour une feuille. Ce niveau de confiance est une valeur donnée et vaut 25\%. Le but de l'algorithme est de comparer le taux d'erreur de chaque feuille avec les feuilles des sous-arbres correspondant. Si le taux d'erreur du sous-arbre (nœud parent) est inférieur à celui des feuilles, alors on élague le sous-arbre par une feuille.
+Une fois l'arbre construit, une fonction d'élagage (algorithme 2) est alors appelée afin d'améliorer les résultats. Cette méthode est appelée \textit{error-based pruning} est une amélioration du \textit{pessimistic pruning}~\cite{c4.5}. Selon Quinlan, $E$ objets mal classés sur $N$ observations amènent à un taux d'erreur optimiste de $\frac{E}{N}$. La borne supérieur $U_{CF}(E, N)$ de l'indice de confiance $CF$ peut être trouvée selon les limites de confiances de la distribution binomiale~\cite{c4.5}, ce qui correspond au taux d'erreur prédit pour une feuille. Ce niveau de confiance est une valeur donnée et vaut 25\%. Le but de l'algorithme est de comparer le taux d'erreur de chaque feuille avec les feuilles des sous-arbres correspondant. Si le taux d'erreur du sous-arbre (nœud parent) est inférieur à celui des feuilles, alors on élague le sous-arbre par une feuille.
 
 \frame{
 \begin{algorithm}[H]
  \KwData{E objets mal classés, N observations}
- \KwResult{sous-arbre}
+ \KwResult{arbre}
  \While{sous-arbres à parcourir}{
   erreur feuilles {$\leftarrow$} {$\sum_{}{} N \times U_{25}(E, N)$}\;
   erreur nœud parent {$\leftarrow$} {$N' \times U_{25}'(E', N')$}\;

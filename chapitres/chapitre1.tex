@@ -7,7 +7,7 @@ L'objectif de ce chapitre est dans un premier temps de rappeler des notions de p
 
 \section{Rappels de probabilité}
 	\subsection{Expérience aléatoire}
-Une expérience est dire aléatoire si les résultats possibles sont connus à l'avance sans vraiment savoir celui obtenu au préalable. On appelle univers, noté \(\Omega\), l'ensemble de toutes les issues possibles d'une expérience et \(\omega\) une réalisation de l'expérience.
+Une expérience est dite aléatoire si les résultats possibles sont connus à l'avance sans vraiment savoir celui obtenu au préalable. On appelle univers, noté \(\Omega\), l'ensemble de toutes les issues possibles d'une expérience et \(\omega\) une réalisation de l'expérience.
 \begin{equation}
 \Omega = \begin{Bmatrix} \omega_1, \omega_2, \cdots, \omega_n \end{Bmatrix}, n \in \mathbb{N}
 \end{equation}
@@ -36,7 +36,7 @@ A = (A \cap B) \cup (A \cap \overline{B}) \\
 \end{array}
 \right . 
 \end{equation}
-On peut alors déduire deux formules : le théorème de Bayes (1.4) permettant de calculer \(P_B(A)\) et le théorème es probabilités totales (1.5) qui permet de connaitre la valeur de \(P(A)\) à partir de deux événements $A$ et $B$. 
+On peut alors déduire deux formules : le théorème de Bayes (1.4) permettant de calculer \(P_B(A)\) et le théorème des probabilités totales (1.5) qui permet de connaitre la valeur de \(P(A)\) à partir de deux événements $A$ et $B$. 
 \begin{equation}
 P_B(A) = \frac{P(A \cap B)}{P(B)}
 \end{equation}
@@ -60,9 +60,9 @@ Pour construire un arbre de décision, une approche \textit{Top-Down} est utilis
 \item Séparer le nœud actuel en fonction des résultats possibles.
 \item Appliquer récursivement jusqu'à atteindre les feuilles.
 \end{enumerate}
-Lorsque chaque nœuds sont composés exactement de deux descendants (hors feuilles), on parle alors d'arbre de décision binaire. C'est un cas très largement utilisé des algorithmes de construction d'arbres tels que CART~\cite{ant_colony}, qui sera expliqué ultérieurement.
+Lorsque chaque nœud est composé exactement de deux descendants (hors feuilles), on parle alors d'arbre de décision binaire. C'est un cas très largement utilisé des algorithmes de construction d'arbres tels que CART~\cite{ant_colony}, qui sera expliqué ultérieurement.
 \subsection{Exemple}
-Prenons comme exemple les données météorologiques présente dans la table 1. Cette table est constitué de différentes colonnes concernant différentes information ainsi qu'une colonne indiquant si la décision de sortir a été prise ou non. Dans un peu premier temps, il est possible de déduire les tests à réaliser comme par exemple "La température est-elle élevée ?" ou encore "Quel est le temps ?". A ces questions découlent des réponses possibles, \{oui, non\} pour la première et \{soleil, nuageux, pluie\} pour la deuxième. Une fois l'approche \textit{TDIDT} utilisée, un arbre de décision est alors obtenu (figure 1.1).
+Prenons comme exemple les données météorologiques présentes dans la table 1. Cette table est constituée de différentes colonnes concernant différentes informations ainsi qu'une colonne indiquant si la décision de sortir a été prise ou non. Dans un premier temps, il est possible de déduire les tests à réaliser comme par exemple "La température est-elle élevée ?" ou encore "Quel est le temps ?". De ces questions découlent des réponses possibles, \{oui, non\} pour la première et \{soleil, nuageux, pluie\} pour la deuxième. Une fois l'approche \textit{TDIDT} utilisée, un arbre de décision est alors obtenu (figure 1.1).
 
 \begin{table}[!h]
 \footnotesize
@@ -105,7 +105,7 @@ Sortie\\
 
 \section{Arbre de décision pour le classement}
 		\subsection{Attributs et classes}
-Soit un ensemble d'observation \(S\) de taille \(n\):
+Soit un ensemble d'observations \(S\) de taille \(n\):
 \begin{equation}
 S = \{s_1, s_2, ..., s_n\}.
 \end{equation}
@@ -113,7 +113,7 @@ Chaque observation \(s_i\) est composée d'un ensemble de \(m\) attributs :
 \begin{equation}
 A_s = \{a_1, a_2, ..., a_m\}.
 \end{equation}
-Soit \(V_j\) l'ensemble de taille \(l\) des valeurs possibles de l'attribut \(a_j\) d'une observation \(s_i\) tels que :
+Soit \(V_j\) l'ensemble de taille \(l\) des valeurs possibles de l'attribut \(a_j\) d'une observation \(s_i\) tel que :
 \begin{equation}
 V_j = \{ v_1, v_2, ..., v_l \}.
 \end{equation}
@@ -123,18 +123,18 @@ Un attribut est dit qualitatif si l'ensemble des valeurs possibles est symboliqu
 Une donnée est quantitative si l'ensemble des valeurs possibles est un ensemble numérique fini ou infini :
 \begin{itemize}
 \item Si un attribut peut prendre une infinité de valeurs dans son ensemble, alors celui-ci est qualifié de continu, par exemple le temps d'exécution d'un processus.
-\item Dans le cas contraire, une variable dite discrète possède une valeur finie. Elle est généralement liée à une énumération, comme par exemple le nombre de trait dans un caractère. 
+\item Dans le cas contraire, une variable dite discrète possède une valeur finie. Elle est généralement liée à une énumération, comme par exemple le nombre de traits dans un caractère. 
 \end{itemize}
 
 \(a_j\) est nominal si la notion d'ordre n'est pas présente dans l'ensemble des valeurs possibles, par exemple si \(V_j = \{\) un, deux, trois, quatre, cinq, six, sept, huit, neuf \(\} \) représente le nom d'un chiffre en toutes lettres.\\
 
-Un attribut est ordinal si la notion les valeurs possibles contiennent la notion d'ordre. Cela peut être par exemple l'appréciation d'un client : \(V_j = \{\) mauvais, bon, très bon \(\} \)\\
+Un attribut est ordinal si les valeurs possibles contiennent la notion d'ordre. Cela peut être par exemple l'appréciation d'un client : \(V_j = \{\) mauvais, bon, très bon \(\} \)\\
 
 Une variable est qualifiée de binaire si l'ensemble \(V_j\) des valeurs possibles est de taille \(l=2\)\\
 
 La classe d'une observation correspond a une "catégorie" et permet de se rapprocher ou de se différencier des autres observations. Elle correspond à une feuille dans un arbre décisionnel.\\
 
-Reprenons la table 1.1 (Météo), l'attribut jour correspond à l'identifiant dans l'observation et donc n'est pas pris en compte. \textit{Temps}, \textit{Température}, \textit{Humidité} et \textit{Vent} sont des attributs qualitatifs dont deux d'entre eux binaires : \(V_{Humidite} = \{haute, normale\}\) et \(V_{Vent} = \{fort, faible\} \). Chaque observation possède une classe \textit{Sortie} pouvant prendre Y ou N comme valeur.
+Reprenons la table 1.1 (Météo), l'attribut \textit{Jour} correspond à l'identifiant dans l'observation et donc n'est pas pris en compte. \textit{Temps}, \textit{Température}, \textit{Humidité} et \textit{Vent} sont des attributs qualitatifs. Parmi eux, deux sont binaires : \(V_{Humidite} = \{haute, normale\}\) et \(V_{Vent} = \{fort, faible\} \). Chaque observation possède une classe \textit{Sortie} pouvant prendre Y ou N comme valeur.
 		\subsection{Apprentissage supervisé}
 Le domaine de l'apprentissage peut se séparer en deux types : le supervisé et le non-supervisé. \\
 
@@ -144,9 +144,9 @@ Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'app
 \begin{equation}
 C = \{c_1, \cdots, c_n\}
 \end{equation}
-Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux par le biais d'une fonction de classement $F$, calculé grâce au jeu de données d'entrainement.
+Classer une observation \(s_i\) revient à trouver le \(c_j\) qui lui correspond le mieux par le biais d'une fonction de classement $F$, calculée grâce au jeu de données d'entrainement.
 		\subsection{Quantification de l'information}
-La composante principale des arbres de décision et la quantification de l'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information $h(x)$ d'une probabilité $P(x)$ est une fonction croissante : si $P(x)$ augmente, $h(x)$ augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
+La composante principale des arbres de décision est la quantification de l'information. \textit{Dans la théorie de l'information, les notions de quantité d'information et d'incertitude sont équivalentes}~\cite{decision_tree, information_theory}. Partant de ces concepts, la quantité d'information $h(x)$ d'une probabilité $P(x)$ est une fonction croissante : si $P(x)$ augmente, $h(x)$ augmente. Par ailleurs, les événements certains et impossibles n'apportent aucune information étant donné que le résultat est connu d'avance.\\
 
 Afin de mesurer le gain d'information, il est nécessaire d'introduire le concept d'entropie correspondant à l'impureté d'une observation en théorie de l'information~\cite{theory_communication}. Soit \(S\) un ensemble d'observations de taille \(n\) où \(s_i = \{\text{Y}, \text{N}\}\). L'entropie \(E\) de \(S\), où \(p_Y\) correspond à la probabilité d'avoir \(Y\) et \(p_N\) d'avoir \(N\)~\cite{machine_learning}, est définie par \begin{equation}
 E(S) = - p_{Y}log_2p_{Y} - p_{N}log_2p_{N}
@@ -177,7 +177,7 @@ Nous venons de montrer l'entropie de $S$ pour un attribut binaire. Par extension
 E(S) = \sum_{i=1}^{l} - p_ilog_2p_i
 \end{equation}
 
-Par exemple, d'après la table 1.1, l'entropie de l'attribut sortie est égale à 
+Par exemple, d'après la table 1.1, l'entropie de l'attribut \textit{Sortie} est égale à 
 \begin{equation}
 \begin{split}
 E(Sortie) & = -\frac{9}{14}log_2(\frac{9}{14}) - \frac{5}{14}log_2(\frac{5}{14})\\
@@ -195,16 +195,16 @@ Par exemple, afin de créer l'arbre de décision de la table Météo, il faut d�
 \begin{equation}
 \begin{split}
 & G(S, Temps) = E(S) - \frac{5}{14}E(S_{T, Soleil}) - \frac{4}{14}E(S_{T, Nuageux}) - \frac{5}{14}E(S_{T, Pluie}) = 0.246\\
-& G(S, Temper) = E(S) - \frac{4}{14}E(S_{Tp, Elev}) - \frac{6}{14}E(S_{Tp, Moy}) - \frac{4}{14}E(S_{Tp, Basse}) = 0.030\\
+& G(S, T°) = E(S) - \frac{4}{14}E(S_{Tp, Elev}) - \frac{6}{14}E(S_{Tp, Moy}) - \frac{4}{14}E(S_{Tp, Basse}) = 0.030\\
 & G(S, Humidite) = E(S) - \frac{7}{14}E(S_{H, Haute}) - \frac{7}{14}E(S_{H, Normale}) = 0.152\\
 & G(S, Vent) = E(S) - \frac{6}{14}E(S_{V, Fort}) - \frac{8}{14}E(S_{V, Faible}) = 0.048\\
 \end{split}
 \end{equation}
-D'après les résultats obtenus :\\ \( G(S, Temps) > G(S, Humidite) > G(S, Vent) > G(S, Temperature) \). L'attribut \textit{Temps} sera donc choisi comme racine de l'arbre de décision. Ce processus sera ensuite répété pour chaque nouveau nœud crée jusqu'à ce que toutes les feuilles soit atteintes (figure 1.1).
+D'après les résultats obtenus :\\ \( G(S, Temps) > G(S, Humidite) > G(S, Vent) > G(S, Temperature) \). L'attribut \textit{Temps} sera donc choisi comme racine de l'arbre de décision. Ce processus sera ensuite répété pour chaque nouveau nœud crée jusqu'à ce que toutes les feuilles soient atteintes (figure 1.1).
 
 \section{Arbre de décision pour l'optimisation}
 \subsection{Problème d'\textit{overfitting}}
-Un des problèmes principal des arbres de décision est le sur-ajustement (\textit{overfitting}) : la taille d'un arbre augmente linéairement avec la taille du jeu de données d'apprentissage. Ce principe d'\textit{overfitting} peut être définit de la manière suivante : \textit{soit $H$ un espace d'hypothèses et $h \in H$, $h$ sur-ajuste le jeu d'apprentissage s'il existe une alternative $h' \in H$, tel que h a une marge d'erreur plus petite que $h'$ sur les jeux d'apprentissage, mais une marge d'erreur plus grande sur la totalité du jeux de données.}~\cite{machine_learning} On peut voir sur la figure 1.3 que plus la précision du jeu d'apprentissage augmente, plus la précision du jeu de test diminue. C'est pourquoi des méthodes d'élagage et d'amélioration d'arbre sont mises en place afin de minimiser ce problème.
+Un des principaux problèmes des arbres de décision est le sur-ajustement (\textit{overfitting}) : la taille d'un arbre augmente linéairement avec la taille du jeu de données d'apprentissage. Ce principe d'\textit{overfitting} peut être défini de la manière suivante : \textit{soit $H$ un espace d'hypothèses et $h \in H$, $h$ sur-ajuste le jeu d'apprentissage s'il existe une alternative $h' \in H$, tel que h a une marge d'erreur plus petite que $h'$ sur les jeux d'apprentissage, mais une marge d'erreur plus grande sur la totalité du jeux de données.}~\cite{machine_learning} On peut voir sur la figure 1.3 que plus la précision du jeu d'apprentissage augmente, plus la précision du jeu de test diminue. C'est pourquoi des méthodes d'élagage et d'amélioration d'arbre sont mises en place afin de minimiser ce problème.
 
 \begin{figure}[]
 	\centering
@@ -214,9 +214,9 @@ Un des problèmes principal des arbres de décision est le sur-ajustement (\text
 
 \subsection{Élagage}
 \subsubsection{Pré-élagage}
-Le pré-élagage consiste à arrêter prématurément la construction de l'arbre même si chaque feuille ne correspondent pas à une et seulement une classe. Certains nœuds ne seront alors pas plus développés, selon différents critères d'arrêt choisi au préalable.\\
+Le pré-élagage consiste à arrêter prématurément la construction de l'arbre même si chaque feuille ne correspond pas à une et seulement une classe. Certains nœuds ne seront alors pas plus développés, selon différents critères d'arrêt choisis au préalable.\\
 
-Une première méthode consiste à définir un nombre d'objets minimum par nœud. Si lors de la création de nouveaux nœuds, l'un deux ne dépasse pas le seuil, alors ceux-ci ne sont pas créés et le nœud parent devient une feuille de l'arbre. Une deuxième méthode utilise le test du $\chi^2$ afin de déterminer s'il est statistiquement pertinent de sélectionner un attribut pour construire la suite de l'arbre. Il existe par ailleurs d'autre méthodes qui consiste à définir des seuils pour arrêter la construction~\cite{decision_tree, pruning}.
+Une première méthode consiste à définir un nombre d'objets minimum par nœud. Si lors de la création de nouveaux nœuds, l'un deux ne dépasse pas le seuil, alors ceux-ci ne sont pas créés et le nœud parent devient une feuille de l'arbre. Une deuxième méthode utilise le test du $\chi^2$ afin de déterminer s'il est statistiquement pertinent de sélectionner un attribut pour construire la suite de l'arbre. Il existe par ailleurs d'autres méthodes qui consistent à définir des seuils pour arrêter la construction~\cite{decision_tree, pruning}.
 \begin{itemize}
 \item Le seuil maximum de feuilles a été atteint.
 \item Le seuil maximum d'attributs a été franchi.
@@ -224,9 +224,9 @@ Une première méthode consiste à définir un nombre d'objets minimum par nœud
 \end{itemize}
 
 \subsubsection{Post-élagage}
-Contrairement au pré-élagage, le post-élagage se place une fois la construction de l'arbre faite. L'objectif est de supprimer des sous-ensemble de l'arbre afin de les remplacer par des feuilles en minimisant l'impact sur le taux d'erreur, voire réduire le taux d'erreur. Il existe différentes manières d'élaguer un arbre de décision, quatre d'entre-elles seront étudiées~\cite{comparative_pruning}.\\
+Contrairement au pré-élagage, le post-élagage se place une fois la construction de l'arbre faite. L'objectif est de supprimer des sous-ensembles de l'arbre afin de les remplacer par des feuilles en minimisant l'impact sur le taux d'erreur, voire réduire le taux d'erreur. Il existe différentes manières d'élaguer un arbre de décision, quatre d'entre elles seront étudiées~\cite{comparative_pruning}.\\
 
-Une première méthode de post-élagage est le \textit{reduced error pruning} (Quinlan~\cite{simplifying_dt}). Elle compare le nombre d'erreur de classement entre le sous-arbre $T_t$ intact et le sous-arbre $T_t'$ lorsque que $t$ est transformé en feuille. Si $T_t'$ est plus performant, alors $T_t$ est élagué et $t$ devient une feuille de l'arbre.\\
+Une première méthode de post-élagage est le \textit{reduced error pruning} (Quinlan~\cite{simplifying_dt}). Elle compare le nombre d'erreur de classement entre le sous-arbre $T_t$ intact et le sous-arbre $T_t'$ lorsque $t$ est transformé en feuille. Si $T_t'$ est plus performant, alors $T_t$ est élagué et $t$ devient une feuille de l'arbre.\\
 
 Le \textit{pessimistic error pruning} est une méthode d'élagage proposée par Quinlan~\cite{simplifying_dt}. Elle remplace le nombre $J$ d'observations mal classées sur une feuille par $J + \frac{1}{2}$. D'après lui, le rapport $\frac{J}{K}$ d'observations mal classées, où K est le nombre d'observations sur une feuille, est une estimation optimiste pas assez fiable, c'est pourquoi il a choisi de la remplacer par une distribution binomiale~\cite{machine_learning, simplifying_dt}.\\
 

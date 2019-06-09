@@ -71,10 +71,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}4.3}Méthode de recherche}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.4}Algorithme de classement}{24}% 
+\contentsline {section}{\numberline {\color {red}4.4}Algorithme de classement}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.5}Algorithme Lazy}{24}% 
+\contentsline {section}{\numberline {\color {red}4.5}Algorithme Lazy}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.6}Comparaison des résultats}{24}% 
+\contentsline {section}{\numberline {\color {red}4.6}Comparaison des résultats}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliographie}{25}% 
+\contentsline {chapter}{Bibliographie}{27}% 

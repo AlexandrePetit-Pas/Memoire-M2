@@ -2,6 +2,7 @@
 
 \chapter{Apprentissage du MNIST}
 \section{Introduction}
+L'objectif de ce chapitre est d'implémenter et analyser les méthodes décrites précédemment afin de déduire l'efficacité des algorithmes dans le cas de la base du MNIST. Il est nécessaire dans un premier temps d'expliquer la base de donnée MNIST et de situer la problématique du mémoire afin d'introduire par la suite la méthode de travail. Une fois les observations faites, une comparaison des résultats sera effectué pour en dégager la méthode la plus pertinente pour répondre au problème.
 
 \section{Définition du MNIST}
 MINST (\textit{Modified National Institute of Standards and Technology}) est une base de données de chiffres, écrits à la main, produite par~\citeauthor{mnist}~\cite{mnist}. Elle s'inspire d'une autre base de données, créée par le NIST \textit{National Institute of Standards and Technology}, qui possédait des caractères alphanumériques écrits à la main. La base MNIST est composée de 60 000 images d'apprentissage et 10 000 images de test, chacune en noir et blanc et d'une taille de 28x28 pixel. Une technique d’anticrénelage a été appliqué sur les images afin de leur donner un niveau de gris~\cite{mnist}. Une image donne alors un vecteur de dimension 784 dont chaque valeur est comprise entre 0 (blanc) et 255 (noir).\\
@@ -10,11 +11,24 @@ La base MNIST est une base qui sert de standard dans les domaines de l'apprentis
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=1]{img/5.png}
+	\includegraphics[scale=0.9]{img/5.png}
 	\caption{Exemple d'un chiffre de la base MNIST}
 \end{figure}
 
+
 \section{Méthode de recherche}
+En utilisant MNIST, l'objectif est de déterminer quelle méthode d'apprentissage permettra d'obtenir un classement avec la meilleure précision tout en gardant un temps d'exécution relativement raisonnable.\\
+
+Cette recherche se place dans un contexte de classement de chiffres afin de reconnaître les numéros étudiants écrits sur une feuille d'examen. Il est donc envisageable d'avoir une erreur lors de la prédiction car le correcteur peut manuellement faire les changements nécessaire dans ce cas. En revanche, plus la précision est importante, plus l'algorithme sera fiable et économisera du temps lors d'une correction. Par ailleurs, le temps d'exécution de l'algorithme n'est pas un facteur majeur mais si celui-ci devient trop conséquent alors la correction assistée sera plus longue qu'une correction manuelle. Dans ce cas, l'algorithme n'est pas pertinent.\\
+
+Deux algorithmes ont été choisis afin de réaliser les tests : K-NN et CART.\\
+
+Le premier, K-NN, a été sélectionné car il permet de tester l'approche paresseuse des classements. La problématique du choix de la valeur de $k$ se résoudra par un choix arbitraire : l'algorithme sera testé avec $k=1$, $k=3$, $k=5$, $k=10$. Les explications précédentes (3.2.2) laissent à penser que $k=10$ sera trop grand, ce qui réduira la précision des résultats. Au contraire, $k=1$ aura une bonne précision mais une marge d'erreur plus grande à cause de l'\textit{overfitting}.\\
+
+Le deuxième algorithme sélectionné est CART. Celui-ci représentera la famille des arbres de décision. L'avantage du traitement des attributs de C4.5 n'est pas exploité avec les données du MNIST car celles-ci sont toutes quantitatives. CART sera par conséquent préféré.\\
+
+La bibliothèque utilisée pour l'implémentation est Scikit-learn~\cite{scikit-learn}. Pour répondre à des problèmes de mémoire, le nombre de données d'apprentissage sera réduit 30 000 quant au jeu de test, celui-ci sera réduit à 5000. De plus, une autre série de test sera faite sur un échantillon de 30 000 puis 10 000 d'apprentissage pour 800 de test. Celui-ci sera réalisé dans le but de se rapprocher le plus possible du cas d'une promotion de cent étudiants en moyenne avec chacun un numéro étudiant composé de huit chiffres. Le choix d'un échantillon d'apprentissage petit (10 000 observations) et de voir si la perte de précision du au manque de cas est négligeable.
+
 \section{Algorithme de classement}
 \section{Algorithme Lazy}
 \section{Comparaison des résultats}

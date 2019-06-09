@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  6 JUN 2019 21:27
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  9 JUN 2019 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1440,11 +1440,6 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) [7
 
 ]
-Overfull \hbox (5.78632pt too wide) in paragraph at lines 63--64
-\TU/Lato(0)/m/n/12 Lorsque chaque nœuds sont composés exactement de deux descen
-dants (hors feuilles),
- []
-
 
 LaTeX Font Warning: Font shape `TU/Lato(0)/m/sc' undefined
 (Font)              using `TU/Lato(0)/m/n' instead on input line 97.
@@ -1607,52 +1602,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 [21]) (./chapitres/chapitre4.tex [22]
 Chapitre 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 File: img/5.png Graphic file (type bmp)
 <img/5.png>
-) (./annexes/annexes.tex)
-Underfull \vbox (badness 6094) has occurred while \output is active []
 
- [23
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+[23
 
 ]
-[24]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+) (./annexes/annexes.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+[25] [26
+
+]
 Overfull \hbox (11.47571pt too wide) in paragraph at lines 181--181
 []\TU/Lato(0)/m/sc/12 Jorge Moraleda. “Gregory Shakhnarovich, Trevor Darrell an
 d Piotr Indyk : Nearest-
  []
 
-[25
+[27] [28
 
-] [26
-
-] (./memoire.toc [27])
+] (./memoire.toc [29])
 \tf@toc=\write5
 \openout5 = `memoire.toc'.
 
- [28] (./memoire.lof)
+ [30] (./memoire.lof)
 \tf@lof=\write6
 \openout6 = `memoire.lof'.
 
- [29
+ [31
 
-] [30
+] [32
 
 ] (./memoire.lot)
 \tf@lot=\write7
 \openout7 = `memoire.lot'.
 
 
-[31] [32
+[33] [34
 
 ] (./memoire.loa)
 \tf@loa=\write8
 \openout8 = `memoire.loa'.
 
- [33] (./memoire.aux)
+ [35] (./memoire.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1661,12 +1681,12 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44110 strings out of 492933
- 1031498 string characters out of 6136537
- 1412690 words of memory out of 5000000
- 47470 multiletter control sequences out of 15000+600000
+ 44112 strings out of 492933
+ 1031588 string characters out of 6136537
+ 1414131 words of memory out of 5000000
+ 47472 multiletter control sequences out of 15000+600000
  543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,16n,96p,1011b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on memoire.pdf (37 pages).
+Output written on memoire.pdf (39 pages).
