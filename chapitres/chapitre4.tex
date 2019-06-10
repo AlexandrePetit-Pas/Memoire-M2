@@ -27,8 +27,83 @@ Le premier, K-NN, a été sélectionné car il permet de tester l'approche pares
 
 Le deuxième algorithme sélectionné est CART. Celui-ci représentera la famille des arbres de décision. L'avantage du traitement des attributs de C4.5 n'est pas exploité avec les données du MNIST car celles-ci sont toutes quantitatives. CART sera par conséquent préféré.\\
 
-La bibliothèque utilisée pour l'implémentation est Scikit-learn~\cite{scikit-learn}. Pour répondre à des problèmes de mémoire, le nombre de données d'apprentissage sera réduit 30 000 quant au jeu de test, celui-ci sera réduit à 5000. De plus, une autre série de test sera faite sur un échantillon de 30 000 puis 10 000 d'apprentissage pour 800 de test. Celui-ci sera réalisé dans le but de se rapprocher le plus possible du cas d'une promotion de cent étudiants en moyenne avec chacun un numéro étudiant composé de huit chiffres. Le choix d'un échantillon d'apprentissage petit (10 000 observations) et de voir si la perte de précision du au manque de cas est négligeable.
+Pour répondre à des problèmes de mémoire, le nombre de données d'apprentissage sera réduit 30 000 quant au jeu de test, celui-ci sera réduit à 5000. De plus, une autre série de test sera faite sur un échantillon de 30 000 puis 10 000 d'apprentissage pour 800 de test. Celui-ci sera réalisé dans le but de se rapprocher le plus possible du cas d'une promotion de cent étudiants en moyenne avec chacun un numéro étudiant composé de huit chiffres. Le choix d'un échantillon d'apprentissage plus petit (10 000 observations) et de voir si la perte de précision du au manque de cas est négligeable.\\
 
-\section{Algorithme de classement}
-\section{Algorithme Lazy}
+
+Parmi les outils utilisés, Scikit-learn~\cite{scikit-learn} permet d'implémenter les algorithmes cités précédemment. Afin de faciliter son utilisation, il a fallu convertir les fichiers de la base MNIST du format IDX, qui est fait pour les vecteurs et les matrices multidimensionnelles, en format CSV.
+
 \section{Comparaison des résultats}
+Les tableaux 4.1, 4.2, 4.3 et 4.4 montrent les résultats obtenus suite aux implémentations. La colonne "Précision" correspond au quotient de réussite du classement de l'algorithme. La colonne "Temps" correspond au temps d'exécution du programme, du chargement des données au calcul de la précision. Cette métrique est influencée par les performances de l'ordinateur et de l'allocation donnée au programme. Il faut donc regarder l'ordre de grandeur de celle-ci plutôt que la valeur exacte.\\
+
+Quatre tests ont été réalisés pour chaque algorithme:
+\begin{itemize}
+\item "Test 1" correspond à 30 000 données d'apprentissage pour 5 000 de test.
+\item "Test 2" correspond à 30 000 données d'apprentissage pour 800 de test.
+\item Le "Test 3" est composé de 10 000 observations d'apprentissage pour 5 000 de test.
+\item "Test 4" est composé de 10 000 observations d'apprentissage pour 800 de test.
+\end{itemize}
+
+ 
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+ & \multicolumn{2}{c |}{Test 1} & \multicolumn{2}{c |}{Test 2} \\
+\hline
+k        & Précision             & Temps  & Précision             & Temps\\
+\hline
+$k = 1$  & 0.9614 ($\pm$ 0.0079) & 1 147s &  ($\pm$ ) & \\
+$k = 3$  & 0.9608 ($\pm$ 0.0064) & 1 122s &  ($\pm$ ) & \\
+$k = 5$  & 0.9600 ($\pm$ 0.0075) & 1 162s &  ($\pm$ ) & \\
+$k = 10$ & 0.9561 ($\pm$ 0.0081) & 1 130s &  ($\pm$ ) & \\
+\hline
+\end{tabular}
+\caption{Résultats de K-NN avec 30 000 observations d'apprentissage}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+ & \multicolumn{2}{c |}{Test 3} & \multicolumn{2}{c |}{Test 4} \\
+\hline
+k        & Précision             & Temps  & Précision             & Temps\\
+\hline
+$k = 1$  &                       &        & 0.9392 ($\pm$ 0.0145) & 133s\\
+$k = 3$  &                       &        & 0.9395 ($\pm$ 0.0108) & 132s\\
+$k = 5$  &                       &        & 0.9377 ($\pm$ 0.0133) & 134s\\
+$k = 10$ &                       &        & 0.9339 ($\pm$ 0.0161) & 134s\\
+\hline
+\end{tabular}
+\caption{Résultats de K-NN avec 10 000 observations d'apprentissage}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+\multicolumn{2}{| c |}{Test 1} & \multicolumn{2}{c |}{Test 2} \\
+\hline
+Précision             & Temps  & Précision             & Temps \\
+\hline
+0.8469 ($\pm$ 0.0179) & 54s    & 0.8481 ($\pm$ 0.0157) & 53s\\
+\hline
+\end{tabular}
+\caption{Résultats de CART avec 30 000 observations d'apprentissage}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+\multicolumn{2}{| c |}{Test 3} & \multicolumn{2}{c |}{Test 4} \\
+\hline
+Précision             & Temps  & Précision             & Temps \\
+\hline
+0.8180 ($\pm$ 0.0150) & 17s    & 0.8125 ($\pm$ 0.0155) & 17s\\
+\hline
+\end{tabular}
+\caption{Résultats de CART avec 10 000 observations d'apprentissage}
+\end{table}
+
+\section{Conclusion}

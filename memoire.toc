@@ -37,8 +37,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Post-élagage}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {\color {red}1.5.3}Méthodes d'amélioration}{15}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Lazy Decision Tree}{17}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}2.1}Lazy Decision Tree pour le classement}{17}% 
@@ -59,10 +57,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}3.4}C4.5}{21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.5}ID3}{22}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}3.6}A *}{22}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Apprentissage du MNIST}{23}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}4.1}Introduction}{23}% 
@@ -71,10 +65,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}4.3}Méthode de recherche}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.4}Algorithme de classement}{25}% 
+\contentsline {section}{\numberline {\color {red}4.4}Comparaison des résultats}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.5}Algorithme Lazy}{25}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}4.6}Comparaison des résultats}{25}% 
+\contentsline {section}{\numberline {\color {red}4.5}Conclusion}{25}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliographie}{27}% 

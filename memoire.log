@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  9 JUN 2019 22:54
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  10 JUN 2019 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1599,7 +1599,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-[21]) (./chapitres/chapitre4.tex [22]
+[21])
+Underfull \hbox (badness 10000) in paragraph at lines 88--168
+
+ []
+
+(./chapitres/chapitre4.tex [22]
 Chapitre 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
@@ -1635,19 +1640,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-) (./annexes/annexes.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-[25] [26
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
-]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+[24]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./annexes/annexes.tex) [25] [26]
 Overfull \hbox (11.47571pt too wide) in paragraph at lines 181--181
 []\TU/Lato(0)/m/sc/12 Jorge Moraleda. “Gregory Shakhnarovich, Trevor Darrell an
 d Piotr Indyk : Nearest-
  []
 
-[27] [28
+[27
+
+] [28
 
 ] (./memoire.toc [29])
 \tf@toc=\write5
@@ -1683,7 +1698,7 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 Here is how much of TeX's memory you used:
  44112 strings out of 492933
  1031588 string characters out of 6136537
- 1414131 words of memory out of 5000000
+ 1414159 words of memory out of 5000000
  47472 multiletter control sequences out of 15000+600000
  543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
