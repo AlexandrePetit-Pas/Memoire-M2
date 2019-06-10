@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  10 JUN 2019 17:54
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  10 JUN 2019 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1392,16 +1392,16 @@ LaTeX Font Warning: Font shape `TU/lmss/m/sc' in size <17.28> not available
 File: img/logo_nanterre.jpg Graphic file (type bmp)
 <img/logo_nanterre.jpg>
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 109.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 112.
 
 LaTeX Font Warning: Font shape `TU/lmss/m/sc' in size <14.4> not available
-(Font)              Font shape `TU/lmr/m/sc' tried instead on input line 109.
+(Font)              Font shape `TU/lmr/m/sc' tried instead on input line 112.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1528,14 +1528,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-[14]) (./chapitres/chapitre2.tex [15] [16
+[14]) (./chapitres/chapitre3.tex [15] [16
 
 ]
 Chapitre 2.
-) (./chapitres/chapitre3.tex [17] [18
-
-]
-Chapitre 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
@@ -1587,25 +1583,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[19]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 File: img/knnk.png Graphic file (type bmp)
 <img/knnk.png>
-[20]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-[21])
-Underfull \hbox (badness 10000) in paragraph at lines 88--168
+[19])
+Underfull \hbox (badness 10000) in paragraph at lines 88--171
 
  []
 
-(./chapitres/chapitre4.tex [22]
-Chapitre 4.
+(./chapitres/chapitre4.tex [20]
+Chapitre 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
@@ -1618,7 +1614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[23
+[21
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
@@ -1650,19 +1646,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-[24]
+[22]) [23] (./conclusion.tex [24]
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ []
 
-) (./annexes/annexes.tex) [25] [26]
-Overfull \hbox (11.47571pt too wide) in paragraph at lines 181--181
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+) (./annexes/annexes.tex) [25
+
+] [26
+
+]
+Overfull \hbox (11.47571pt too wide) in paragraph at lines 190--190
 []\TU/Lato(0)/m/sc/12 Jorge Moraleda. “Gregory Shakhnarovich, Trevor Darrell an
 d Piotr Indyk : Nearest-
  []
 
-[27
-
-] [28
+[27] [28
 
 ] (./memoire.toc [29])
 \tf@toc=\write5
@@ -1681,13 +1685,7 @@ d Piotr Indyk : Nearest-
 \openout7 = `memoire.lot'.
 
 
-[33] [34
-
-] (./memoire.loa)
-\tf@loa=\write8
-\openout8 = `memoire.loa'.
-
- [35] (./memoire.aux)
+[33] (./memoire.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1696,12 +1694,12 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44112 strings out of 492933
- 1031588 string characters out of 6136537
+ 44108 strings out of 492933
+ 1031537 string characters out of 6136537
  1414159 words of memory out of 5000000
- 47472 multiletter control sequences out of 15000+600000
+ 47471 multiletter control sequences out of 15000+600000
  543098 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,16n,96p,1011b,6413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on memoire.pdf (39 pages).
+Output written on memoire.pdf (37 pages).

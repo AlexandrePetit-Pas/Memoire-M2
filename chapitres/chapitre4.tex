@@ -32,7 +32,7 @@ Pour répondre à des problèmes de mémoire, le nombre de données d'apprentiss
 
 Parmi les outils utilisés, Scikit-learn~\cite{scikit-learn} permet d'implémenter les algorithmes cités précédemment. Afin de faciliter son utilisation, il a fallu convertir les fichiers de la base MNIST du format IDX, qui est fait pour les vecteurs et les matrices multidimensionnelles, en format CSV.
 
-\section{Comparaison des résultats}
+\section{Analyse des résultats}
 Les tableaux 4.1, 4.2, 4.3 et 4.4 montrent les résultats obtenus suite aux implémentations. La colonne "Précision" correspond au quotient de réussite du classement de l'algorithme. La colonne "Temps" correspond au temps d'exécution du programme, du chargement des données au calcul de la précision. Cette métrique est influencée par les performances de l'ordinateur et de l'allocation donnée au programme. Il faut donc regarder l'ordre de grandeur de celle-ci plutôt que la valeur exacte.\\
 
 Quatre tests ont été réalisés pour chaque algorithme:
@@ -52,10 +52,10 @@ Quatre tests ont été réalisés pour chaque algorithme:
 \hline
 k        & Précision             & Temps  & Précision             & Temps\\
 \hline
-$k = 1$  & 0.9614 ($\pm$ 0.0079) & 1 147s &  ($\pm$ ) & \\
-$k = 3$  & 0.9608 ($\pm$ 0.0064) & 1 122s &  ($\pm$ ) & \\
-$k = 5$  & 0.9600 ($\pm$ 0.0075) & 1 162s &  ($\pm$ ) & \\
-$k = 10$ & 0.9561 ($\pm$ 0.0081) & 1 130s &  ($\pm$ ) & \\
+$k = 1$  & 0.9614 ($\pm$ 0.0079) & 1 147s & 0.9614 ($\pm$ 0.0079) & 969s\\
+$k = 3$  & 0.9608 ($\pm$ 0.0064) & 1 122s & 0.9608 ($\pm$ 0.0064) & 965s\\
+$k = 5$  & 0.9600 ($\pm$ 0.0075) & 1 162s & 0.9600 ($\pm$ 0.0075) & 970s\\
+$k = 10$ & 0.9561 ($\pm$ 0.0081) & 1 130s & 0.9561 ($\pm$ 0.0081) & 980s\\
 \hline
 \end{tabular}
 \caption{Résultats de K-NN avec 30 000 observations d'apprentissage}
@@ -69,10 +69,10 @@ $k = 10$ & 0.9561 ($\pm$ 0.0081) & 1 130s &  ($\pm$ ) & \\
 \hline
 k        & Précision             & Temps  & Précision             & Temps\\
 \hline
-$k = 1$  &                       &        & 0.9392 ($\pm$ 0.0145) & 133s\\
-$k = 3$  &                       &        & 0.9395 ($\pm$ 0.0108) & 132s\\
-$k = 5$  &                       &        & 0.9377 ($\pm$ 0.0133) & 134s\\
-$k = 10$ &                       &        & 0.9339 ($\pm$ 0.0161) & 134s\\
+$k = 1$  & 0.9392 ($\pm$ 0.0146) & 196s & 0.9392 ($\pm$ 0.0146) & 133s\\
+$k = 3$  & 0.9395 ($\pm$ 0.0108) & 188s & 0.9395 ($\pm$ 0.0108) & 132s\\
+$k = 5$  & 0.9377 ($\pm$ 0.0133) & 194s & 0.9377 ($\pm$ 0.0133) & 134s\\
+$k = 10$ & 0.9339 ($\pm$ 0.0161) & 190s & 0.9339 ($\pm$ 0.0161) & 134s\\
 \hline
 \end{tabular}
 \caption{Résultats de K-NN avec 10 000 observations d'apprentissage}
@@ -106,4 +106,5 @@ Précision             & Temps  & Précision             & Temps \\
 \caption{Résultats de CART avec 10 000 observations d'apprentissage}
 \end{table}
 
-\section{Conclusion}
+\section{Choix de l'algorithme}
+Les deux algorithmes peuvent être fondamentalement préférés. L'un permet d'avoir une solution rapidement tandis que l'autre apporte une précision plus fine. Dans le cadre d'une détection de numéros étudiant d'une promotion, qui est composée de 100 étudiants dans ce document, l'algorithme devrait être intégré à une solution qui permettrait de faire plus que reconnaître les chiffres. Que ce soit pour corriger automatiquement ou agréger des exercices entre eux, on peut considérer le fait qu'un tel outil est créé afin d'accélérer la correction des examens papiers. C'est pourquoi avoir un algorithme prenant un peu plus de temps qu'un autre mais qui est plus précis semble plus pertinent pour le correcteur. Dans ce cas, K-NN est l'algorithme à retenir avec $k = 3$. Cette valeur de $k$ a été choisie car c'est avec celle-ci que la précision de l'algorithme est la plus grande tout en prenant en compte l'\textit{overfitting}.

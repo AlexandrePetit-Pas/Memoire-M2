@@ -9,12 +9,10 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Résultats de K-NN avec 30 000 observations d'apprentissage}}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Résultats de l'apprentissage avec K-NN pour 30 000 observations d'apprentissage}}{25}% 
+\contentsline {table}{\numberline {3.2}{\ignorespaces Résultats de K-NN avec 10 000 observations d'apprentissage}}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Résultats de l'apprentissage avec K-NN pour 10 000 observations d'apprentissage}}{25}% 
+\contentsline {table}{\numberline {3.3}{\ignorespaces Résultats de CART avec 30 000 observations d'apprentissage}}{23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.3}{\ignorespaces Résultats de l'apprentissage avec CART pour 30 000 observations d'apprentissage}}{25}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.4}{\ignorespaces Résultats de l'apprentissage avec CART pour 10 000 observations d'apprentissage}}{26}% 
+\contentsline {table}{\numberline {3.4}{\ignorespaces Résultats de CART avec 10 000 observations d'apprentissage}}{23}% 

@@ -202,7 +202,7 @@ Par exemple, afin de créer l'arbre de décision de la table Météo, il faut d�
 \end{equation}
 D'après les résultats obtenus :\\ \( G(S, Temps) > G(S, Humidite) > G(S, Vent) > G(S, Temperature) \). L'attribut \textit{Temps} sera donc choisi comme racine de l'arbre de décision. Ce processus sera ensuite répété pour chaque nouveau nœud crée jusqu'à ce que toutes les feuilles soient atteintes (figure 1.1).
 
-\section{Arbre de décision pour l'optimisation}
+\section{Optimisation d'arbre de décision}
 \subsection{Problème d'\textit{overfitting}}
 Un des principaux problèmes des arbres de décision est le sur-ajustement (\textit{overfitting}) : la taille d'un arbre augmente linéairement avec la taille du jeu de données d'apprentissage. Ce principe d'\textit{overfitting} peut être défini de la manière suivante : \textit{soit $H$ un espace d'hypothèses et $h \in H$, $h$ sur-ajuste le jeu d'apprentissage s'il existe une alternative $h' \in H$, tel que h a une marge d'erreur plus petite que $h'$ sur les jeux d'apprentissage, mais une marge d'erreur plus grande sur la totalité du jeux de données.}~\cite{machine_learning} On peut voir sur la figure 1.3 que plus la précision du jeu d'apprentissage augmente, plus la précision du jeu de test diminue. C'est pourquoi des méthodes d'élagage et d'amélioration d'arbre sont mises en place afin de minimiser ce problème.
 
