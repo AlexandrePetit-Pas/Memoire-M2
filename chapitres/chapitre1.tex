@@ -3,7 +3,7 @@
 \chapter{Concepts formels}
 
 \section{Introduction}
-L'objectif de ce chapitre est dans un premier temps de rappeler des notions de probabilités~\cite{probaBio, decision_tree, apprentissage} qui serviront à la compréhension de ce document. Il s'agit ensuite d'expliquer dans sa généralité les concepts d'arbres décisionnels afin d'introduire des principes de classement et d'optimisation.
+L'objectif de ce chapitre est dans un premier temps de rappeler des notions de probabilités~\cite{probaBio, decision_tree, apprentissage} qui serviront à la compréhension de ce document. Il s'agit ensuite d'expliquer dans sa généralité les concepts d'arbres décisionnels afin d'introduire des principes d'apprentissage supervisé, de classement et d'optimisation.
 
 \section{Rappels de probabilité}
 	\subsection{Expérience aléatoire}
@@ -103,7 +103,7 @@ Sortie\\
 	\caption{Arbre de décision de la table Météo}
 \end{figure}
 
-\section{Arbre de décision pour le classement}
+\section{Arbre de décision et classement}
 		\subsection{Attributs et classes}
 Soit un ensemble d'observations \(S\) de taille \(n\):
 \begin{equation}
@@ -117,20 +117,21 @@ Soit \(V_j\) l'ensemble de taille \(l\) des valeurs possibles de l'attribut \(a_
 \begin{equation}
 V_j = \{ v_1, v_2, ..., v_l \}.
 \end{equation}
-La valeur de l'attribut \(a_j\) sera représentée par \(v_k\).
-Un attribut est dit qualitatif si l'ensemble des valeurs possibles est symbolique (non numérique), par exemple si \(V_j\) représente les couleurs d'écriture d'un mot. On obtiendrait alors \( V_j = \{\) bleu, rouge, noir, vert \(\} \).\\
 
+Un attribut est dit qualitatif si l'ensemble des valeurs possibles est symbolique (non numérique), par exemple si \(V_j\) représente les couleurs d'écriture d'un mot. On obtiendrait alors \( V_j = \{\) bleu, rouge, noir, vert \(\} \):
+\begin{itemize}
+\item \(a_j\) est nominal si la notion d'ordre n'est pas présente dans l'ensemble des valeurs possibles, par exemple si \(V_j = \{\) un, deux, trois, quatre, cinq, six, sept, huit \(\} \) représente le nom d'un chiffre en toutes lettres.
+\item $a_j$ est ordinal si les valeurs possibles contiennent la notion d'ordre. Cela peut être par exemple l'appréciation d'un client : \(V_j = \{\) mauvais, bon, très bon \(\} \)\\
+
+\end{itemize}
+\ \\
 Une donnée est quantitative si l'ensemble des valeurs possibles est un ensemble numérique fini ou infini :
 \begin{itemize}
 \item Si un attribut peut prendre une infinité de valeurs dans son ensemble, alors celui-ci est qualifié de continu, par exemple le temps d'exécution d'un processus.
-\item Dans le cas contraire, une variable dite discrète possède une valeur finie. Elle est généralement liée à une énumération, comme par exemple le nombre de traits dans un caractère. 
+\item Dans le cas contraire, une variable dite discrète possède une valeur finie. Elle est généralement liée à une énumération, comme par exemple le nombre de traits dans un caractère.
 \end{itemize}
-
-\(a_j\) est nominal si la notion d'ordre n'est pas présente dans l'ensemble des valeurs possibles, par exemple si \(V_j = \{\) un, deux, trois, quatre, cinq, six, sept, huit, neuf \(\} \) représente le nom d'un chiffre en toutes lettres.\\
-
-Un attribut est ordinal si les valeurs possibles contiennent la notion d'ordre. Cela peut être par exemple l'appréciation d'un client : \(V_j = \{\) mauvais, bon, très bon \(\} \)\\
-
-Une variable est qualifiée de binaire si l'ensemble \(V_j\) des valeurs possibles est de taille \(l=2\)\\
+\ \\
+Qu'elle soit qualitative ou quantitative, une variable est qualifiée de binaire si l'ensemble \(V_j\) des valeurs possibles est de taille \(l=2\), par exemple $V_j = \{0, 1\}$ ou $V_j' = \{ \text{vrai}, \text{faux} \}$\\
 
 La classe d'une observation correspond a une "catégorie" et permet de se rapprocher ou de se différencier des autres observations. Elle correspond à une feuille dans un arbre décisionnel.\\
 
@@ -140,7 +141,7 @@ Le domaine de l'apprentissage peut se séparer en deux types : le supervisé et 
 
 Dans le cas de l'apprentissage non-supervisé, le but recherché est d'assembler les similitudes entre les observations. Une des méthodes les plus communes est le \textit{clustering}~\cite{data_mining}.\\
 
-Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. C'est dans ce domaine que se situe les arbres de décision. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test. Soit $C$ un ensemble de classe de taille $n$ :
+Le second type d'apprentissage est dit supervisé. Dans ce cas, le but est d'apprendre du modèle pour arriver à déterminer la classe de l'observation. Il existe différentes applications de l'apprentissage supervisé, telles que les arbres de décision, les k plus proches voisins et les réseaux de neurones. Nous nous intéresseront uniquement aux arbres de décision et à la méthode des K-NN. Les jeux de données sont alors séparés en deux : une partie jeu d'entrainement (\textit{training set}) et une partie jeu de test (\textit{test set}). Le but est d'apprendre du jeu d'entrainement afin de classer les observations du jeu de test. Soit $C$ un ensemble de classe de taille $n$ :
 \begin{equation}
 C = \{c_1, \cdots, c_n\}
 \end{equation}
@@ -209,7 +210,7 @@ Un des principaux problèmes des arbres de décision est le sur-ajustement (\tex
 \begin{figure}[]
 	\centering
 	\includegraphics[scale=0.5]{img/overfitting.png}
-	\caption{Overfitting d'un arbre de décision sur une base de données médicales afin de déterminer si les patients sont atteints de diabète.~\cite{machine_learning}}
+	\caption{\textit{Overfitting} d'un arbre de décision sur une base de données médicales afin de déterminer si les patients sont atteints de diabète.~\cite{machine_learning}}
 \end{figure}
 
 \subsection{Élagage}
@@ -230,6 +231,6 @@ Une première méthode de post-élagage est le \textit{reduced error pruning} (Q
 
 Le \textit{pessimistic error pruning} est une méthode d'élagage proposée par Quinlan~\cite{simplifying_dt}. Elle remplace le nombre $J$ d'observations mal classées sur une feuille par $J + \frac{1}{2}$. D'après lui, le rapport $\frac{J}{K}$ d'observations mal classées, où K est le nombre d'observations sur une feuille, est une estimation optimiste pas assez fiable, c'est pourquoi il a choisi de la remplacer par une distribution binomiale~\cite{machine_learning, simplifying_dt}.\\
 
-La troisième méthode de post-élagage est le \textit{cost complexity pruning}. Elle consiste à construire une séquence d'arbre $T_0, T_1, \dots, T_L$ en minimisant la valeur de $\alpha$ correspondant à la moyenne du nombre d'observations mal classées par feuille, $T_0$ étant l'arbre initial et $T_L$ l'arbre final. $T_{i+1}$ est obtenu en élaguant tous les nœuds de $T_i$ qui ont la plus petite valeur de $\alpha$~\cite{comparative_pruning}. 
+La troisième méthode de post-élagage est le \textit{cost complexity pruning}. Elle consiste à construire une séquence d'arbre $T_0, T_1, \dots, T_L$ en minimisant la valeur de $\alpha$ correspondant à la moyenne du nombre d'observations mal classées par feuille, $T_0$ étant l'arbre initial et $T_L$ l'arbre final. $T_{i+1}$ est obtenu en élaguant tous les nœuds de $T_i$ qui ont la plus petite valeur de $\alpha$~\cite{comparative_pruning}.\\ 
 
 Enfin, le \textit{minimum error pruning} permet de minimiser le taux d'erreur attendu d'un sous-arbre élagué. Si celui-ci est inférieur au taux d'erreur du sous-arbre sans élagage, alors le nœud sera remplacé par une feuille. Ce taux d'erreur est définit par \begin{equation} E_k = \frac{(n - n_j + k - 1)}{n + k} \end{equation} où $n$ correspond au nombre d'observations dans une feuille, $n_j$ observations appartenant à la classe $j$ et $k$ le nombre de valeurs de la classe~\cite{comparative_pruning}.

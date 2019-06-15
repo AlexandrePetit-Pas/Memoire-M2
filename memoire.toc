@@ -19,7 +19,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {\color {red}1.3.2}Exemple}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}1.4}Arbre de décision pour le classement}{9}% 
+\contentsline {section}{\numberline {\color {red}1.4}Arbre de décision et classement}{9}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {\color {red}1.4.1}Attributs et classes}{9}% 
 \defcounter {refsection}{0}\relax 
@@ -49,7 +49,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}2.3}CART}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {\color {red}2.4}C4.5}{19}% 
+\contentsline {section}{\numberline {\color {red}2.4}C4.5}{20}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Apprentissage du MNIST}{21}% 
 \defcounter {refsection}{0}\relax 
