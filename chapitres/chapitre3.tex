@@ -1,90 +1,112 @@
 \documentclass[memoire.tex]{subfiles}
 
-\chapter{Classement supervisé}
+\chapter{Apprentissage du MNIST}
 \section{Introduction}
-L'objectif de ce chapitre est de mettre en avant les méthodes les plus utilisées dans l'apprentissage supervisé. Ainsi, deux méthodes de construction d'arbre de décisions, CART et C4.5, seront présentés ainsi qu'une autre méthode appelée \textit{K-Nearest Neighbors}. Cela permettra ensuite de mieux comprendre le fonctionnement de l'apprentissage supervisé et pouvoir par la suite mettre en œuvre ces algorithmes.
+L'objectif de ce chapitre est d'implémenter et analyser les méthodes décrites précédemment afin de déduire l'efficacité des algorithmes dans le cas de la base du MNIST. Il est nécessaire dans un premier temps d'expliquer la base de donnée MNIST et de situer la problématique du mémoire afin d'introduire par la suite la méthode de travail. Une fois les observations faites, une comparaison des résultats sera effectuée pour en dégager la méthode la plus pertinente pour répondre au problème.
 
-\section{K Nearest Neighbors}
-\subsection{Concept}
-La méthode des k plus proches voisins (\textit{K-Nearest Neighbors ou K-NN}) est une méthode paresseuse d'apprentissage supervisée principalement utilisée pour le classement. "\textit{Le problème des K-NN est de créer une structure de données pour un ensemble d'objets qui, étant donné un objet $q$, son plus proche voisin dans l'ensemble peut être trouvé rapidement}."~\cite{knn} L'objectif est de placer les observations du jeu d'apprentissage sur un espace métrique. Naturellement, ces observations seront majoritairement regroupées vers un même espace. Lors de l'ajout d'une nouvelle instance, l'algorithme va analyser quels sont ses $k$ voisins les plus proches afin de déterminer la classe à attribuer. C'est un algorithme \textit{lazy} car celui-ci ne fait que très peu de traitement durant la phase d'apprentissage, les calculs sont faits durant la phase de classement des données. Afin de faciliter ce calcul de distance, les données sont normalisées, ce qui simplifie le traitement des données continues mais complexifie le traitement des données qualitatives.\\
+\section{Définition du MNIST}
+MINST (\textit{Modified National Institute of Standards and Technology}) est une base de données de chiffres écrits à la main produite par~\citeauthor{mnist}~\cite{mnist}. Elle s'inspire d'une autre base de données, créée par le NIST (\textit{National Institute of Standards and Technology}), qui possédait des caractères alphanumériques écrits à la main. La base MNIST est composée de 60 000 images d'apprentissage et 10 000 images de test, chacune en noir et blanc et d'une taille de 28x28 pixel. Une technique d’anticrénelage a été appliquée sur les images afin de leur donner un niveau de gris~\cite{mnist}. Une image donne alors un vecteur de dimension 784 dont chaque valeur est comprise entre 0 (blanc) et 255 (noir).\\
 
-La figure 2.1 montre un ensemble de données\footnote{Disponible à l'adresse suivantes : \url{https://www.kaggle.com/alqamahjsr/topic-3-decision-trees-and-knn}} contenant deux attributs $x \in [0, 30]$ et $y \in [0, 30]$ et deux classes, l'une rouge et l'autre jaune. Il est clairement visible que les points rouges se trouvent sur la partie supérieure gauche du graphique tandis que les points jaunes, sur la partie inférieure droite (figure 2.2). Si une nouvelle instance apparaissait, $\forall k \in \mathbb{N}$, celle-ci serait relativement simple à classer.\\
-
-En revanche, avec \textit{K-NN}, le choix du $k$ est arbitraire et celui-ci peut influencer le résultat obtenu.
-
-\begin{figure}[!htb]
-   \begin{minipage}{0.48\textwidth}
-     \centering
-     \includegraphics[width=.7\linewidth]{img/knn.png}
-     \caption{Représentation graphique de points ayant pour classe "rouge" ou "jaune"}
-   \end{minipage}\hfill
-   \begin{minipage}{0.48\textwidth}
-     \centering
-     \includegraphics[width=.7\linewidth]{img/knn2.png}
-     \caption{Séparation des données par leur classe}
-   \end{minipage}
-\end{figure}
-
-\subsection{Choix de k}
-$k$ est une valeur arbitraire choisie avant le lancement de l'algorithme. Cette valeur permet de choisir le nombre de voisins à regarder afin de déterminer la classe d'une observation. Cela signifie que si $k$ est trop petit, l'algorithme renverra la valeur de l'observation la plus proche. Un petit $k$ générera alors un modèle trop précis, qui engendrera un problème d'\textit{overfitting}. Dans le cas contraire, un trop grand $k$ pourrait réduire la précision du modèle et rendre le comportement du modèle trop abstrait~\cite{data_mining}.\\
-
-Par exemple, la figure 2.3\footnote{Antti Ajanki AnAj - Own work, CC BY-SA 3.0, \url{https://commons.wikimedia.org/w/index.php?curid=2170282}} met en avant le problème du choix de $k$. Cette figure possède une observation de test (cercle vert) à classer soit en carré bleu, soit en triangle rouge. Dans le premier cas, $k = 3$, l'algorithme va donc regarder les trois voisins les plus proches du cercle : deux triangles rouges et un carré bleu et déduire que l'observation est un triangle rouge. Dans le deuxième cas, $k = 5$, les cinq plus proches voisins sont deux triangles rouges et trois triangles bleus : l'observation sera alors un carré bleu. Dans cet exemple, un $k$ trop grand a changé la classe en carré bleu alors que celle-ci semble être plus proche des triangles rouges.\\
+La base MNIST est une base qui sert de standard dans les domaines de l'apprentissage de part sa disponibilité, sa taille et le fait que les données soient des caractères écrits à la main~\cite{mnist2}. La figure 3.1 montre un exemple d'une observation du jeu de données, qui est un chiffre 5.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.15]{img/knnk.png}
-	\caption{Exemple de K-NN avec deux valeurs différentes de $k$}
+	\includegraphics[scale=0.9]{img/5.png}
+	\caption{Exemple d'un chiffre de la base MNIST}
 \end{figure}
 
-Afin d'améliorer \textit{K-NN}, il est possible de donner un poids aux voisins et aux attributs. Ainsi, un voisin proche aura plus d'importance qu'un voisin éloigné qui risque de ne pas être de la même classe. Par ailleurs, un attribut n'étant pas pertinent aura beaucoup moins d'importance qu'un attribut aidant au classement~\cite{data_mining}.
+
+\section{Méthode de recherche}
+En utilisant MNIST, l'objectif est de déterminer quelle méthode d'apprentissage permettra d'obtenir un classement avec la meilleure précision tout en gardant un temps d'exécution relativement raisonnable.\\
+
+Cette recherche se place dans un contexte de classement de chiffres afin de reconnaître les numéros étudiants écrits sur une feuille d'examen. Il est donc envisageable d'avoir une erreur lors de la prédiction car le correcteur peut manuellement faire les changements nécessaires dans ce cas. En revanche, plus la précision est importante, plus l'algorithme sera fiable et économisera du temps lors d'une correction. Par ailleurs, le temps d'exécution de l'algorithme n'est pas un facteur majeur mais si celui-ci devient trop conséquent alors la correction assistée sera plus longue qu'une correction manuelle. Dans ce cas, l'algorithme n'est pas pertinent.\\
+
+Deux algorithmes ont été choisis afin de réaliser les tests : K-NN et CART.\\
+
+Le premier, K-NN, a été sélectionné car il permet de tester l'approche paresseuse des classements. La problématique du choix de la valeur de $k$ se résoudra par un choix arbitraire : l'algorithme sera testé avec $k=1$, $k=3$, $k=5$, $k=10$. Les explications précédentes (section 2.2.2) laissent à penser que $k=10$ sera trop grand, ce qui réduira la précision des résultats. Au contraire, $k=1$ aura une bonne précision mais une marge d'erreur plus grande à cause de l'\textit{overfitting}.\\
+
+Le deuxième algorithme sélectionné est CART. Celui-ci représentera la famille des arbres de décision. L'avantage du traitement des attributs de C4.5 n'est pas exploité avec les données du MNIST car celles-ci sont toutes quantitatives. CART sera par conséquent préféré.\\
+
+Pour répondre à des problèmes de mémoire, le nombre de données d'apprentissage sera réduit à 30 000, puis 10 000, quant au jeu de test, celui-ci sera réduit à 5 000. De plus, une autre série sera faite sur un échantillon de test de 800 en gardant les deux tailles du jeu d'apprentissage (30 000 et 10 000). Les jeux de test du MNIST sont supportables par une machine mais ceux d'apprentissage sont trop lourds à charger en mémoire. La deuxième série de tests sera réalisée dans le but de se rapprocher le plus possible du cas d'une promotion de cent étudiants en moyenne avec chacun un numéro étudiant composé de huit chiffres. Le choix d'un échantillon d'apprentissage plus petit (10 000 observations) et de voir si la perte de précision due au manque de cas est négligeable.\\
 
 
-\section{CART}
-\textit{Classification And Regression Trees} (CART) est une méthode développée par~\citeauthor{cart}~\cite{cart}. Cette approche permet de créer des arbres binaires (chaque nœud a deux descendants directs). Chaque test, ou \textit{split}, correspond à la question binaire qui maximise la réduction de l'entropie. Pour cela, l'algorithme va parcourir tous les attributs de chaque nœud et garder le meilleur pour en dégager le \textit{split} maximisant la réduction de l'entropie. Il va ensuite comparer les \textit{splits} pour garder le meilleur. L'algorithme 1 montre le procédé suivant le choix du split. Les données sont alors séparées en deux : celles qui répondent "vrai" au test d'un côté et celles qui renvoient "faux" de l'autre. Ces actions sont répétées autant de fois que nécessaire jusqu'à atteindre les feuilles de l'arbre ou un autre critère d'arrêt. 
+Parmi les outils utilisés, Scikit-learn~\cite{scikit-learn} permet d'implémenter les algorithmes cités précédemment. Afin de faciliter son utilisation, il a fallu convertir les fichiers de la base MNIST du format IDX, qui est fait pour les vecteurs et les matrices multidimensionnelles, en format CSV.
 
-\frame{
-\begin{algorithm}[H]
- \KwData{jeu de données}
- \KwResult{arbre de décision}
-  calcul du meilleur split et de son gain d'information\;
-  \eIf{gain d'information = 0}{
-   renvoie une feuille contenant les données\;
-   }{
-   récupérer les données "vraies" et "fausses" du split\;
-   retour au début en donnant les données "vraies" comme paramètre\;
-   retour au début en donnant les données "fausses" comme paramètre\;
-  }
+\section{Analyse des résultats}
+Les tableaux 3.1, 3.2, 3.3 et 3.4 montrent les résultats obtenus suite aux implémentations. La colonne "Précision" correspond au quotient de réussite du classement de l'algorithme. La colonne "Temps" correspond au temps d'exécution du programme, du chargement des données au calcul de la précision. Cette métrique est influencée par les performances de l'ordinateur et de l'allocation donnée au programme. Il faut donc regarder l'ordre de grandeur de celle-ci plutôt que la valeur exacte.\\
 
- \caption{Algorithme CART}
-\end{algorithm}
-}
-
-Dans le cas où les attributs ne sont pas binaires, les questions posées sont alors de la forme :
+Quatre tests ont été réalisés pour chaque algorithme:
 \begin{itemize}
-\item $x \leq 0.9$ ?
-\item $v_1 \in V = \{v_1, v_2, v_n\}$, $\forall n \in \mathbb{N}$, $x = v_1$ ? 
-\item $\forall i < n$, $x \in \{v_1, \dots, v_i\}$ ?
+\item "Test 1" correspond à 30 000 données d'apprentissage pour 5 000 de test.
+\item "Test 2" correspond à 30 000 données d'apprentissage pour 800 de test.
+\item Le "Test 3" est composé de 10 000 observations d'apprentissage pour 5 000 de test.
+\item "Test 4" est composé de 10 000 observations d'apprentissage pour 800 de test.
 \end{itemize}
-Chaque possibilité sera étudiée ce qui peut augmenter rapidement la complexité de l'algorithme si les nombres d'attributs ou de valeurs sont grands. C'est pourquoi l'algorithme CART n'est pas adapté aux valeurs continues.\\
 
-Afin d'améliorer la précision de l'arbre et réduire l'\textit{overfitting}, il est possible d'utiliser des méthodes de pré-élagage et de post-élagage. Cependant, il n'existe pas de méthode prédéfinie. Il faut alors en choisir une (ou plusieurs) lors de l'implémentation de l'algorithme.
+ 
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+ & \multicolumn{2}{c |}{Test 1} & \multicolumn{2}{c |}{Test 2} \\
+\hline
+k        & Précision             & Temps  & Précision             & Temps\\
+\hline
+$k = 1$  & 0.9614 ($\pm$ 0.0079) & 1 147s & 0.9614 ($\pm$ 0.0079) & 969s\\
+$k = 3$  & 0.9608 ($\pm$ 0.0064) & 1 122s & 0.9608 ($\pm$ 0.0064) & 965s\\
+$k = 5$  & 0.9600 ($\pm$ 0.0075) & 1 162s & 0.9600 ($\pm$ 0.0075) & 970s\\
+$k = 10$ & 0.9561 ($\pm$ 0.0081) & 1 130s & 0.9561 ($\pm$ 0.0081) & 980s\\
+\hline
+\end{tabular}
+\caption{Résultats de K-NN avec 30 000 observations d'apprentissage}
+\end{table}
 
-\section{C4.5}
-C4.5 est un algorithme inventé par~\citeauthor{c4.5}~\cite{c4.5}. Comme pour CART, l'algorithme va parcourir chaque nœud récursivement et trouver le meilleur \textit{split} à chaque fois. Cependant, celui-ci ne se limite pas aux arbres binaires et peut donc avoir \textit{n} nœuds descendants. Pour des attributs qualitatifs, une branche sera créée pour chaque valeur possible. Pour choisir le meilleur \textit{split}, l'algorithme va utiliser le gain d'information (équation 1.13). Pour les valeur continues, l'algorithme utilise un seuil qui permet de diviser les valeurs en deux : le nœud de gauche comprendra toute valeur inférieure à ce seuil tandis que le nœud de droite, toutes les valeurs supérieures. C4.5 est par conséquent plus performant que CART dans la gestion des valeurs continues.\\
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+ & \multicolumn{2}{c |}{Test 3} & \multicolumn{2}{c |}{Test 4} \\
+\hline
+k        & Précision             & Temps  & Précision             & Temps\\
+\hline
+$k = 1$  & 0.9392 ($\pm$ 0.0146) & 196s & 0.9392 ($\pm$ 0.0146) & 133s\\
+$k = 3$  & 0.9395 ($\pm$ 0.0108) & 188s & 0.9395 ($\pm$ 0.0108) & 132s\\
+$k = 5$  & 0.9377 ($\pm$ 0.0133) & 194s & 0.9377 ($\pm$ 0.0133) & 134s\\
+$k = 10$ & 0.9339 ($\pm$ 0.0161) & 190s & 0.9339 ($\pm$ 0.0161) & 134s\\
+\hline
+\end{tabular}
+\caption{Résultats de K-NN avec 10 000 observations d'apprentissage}
+\end{table}
 
-Une fois l'arbre construit, une fonction d'élagage (algorithme 2) est alors appelée afin d'améliorer les résultats. Cette méthode, appelée \textit{error-based pruning}, est une amélioration du \textit{pessimistic pruning}~\cite{c4.5}. Selon Quinlan, $E$ objets mal classés sur $N$ observations amènent à un taux d'erreur optimiste de $\frac{E}{N}$. La borne supérieure $U_{CF}(E, N)$ de l'indice de confiance $CF$ peut être trouvée selon les limites de confiance de la distribution binomiale~\cite{c4.5}, ce qui correspond au taux d'erreur prédit pour une feuille. Ce niveau de confiance est une valeur donnée et vaut 25\%. Le but de l'algorithme est de comparer le taux d'erreur de chaque feuille avec les feuilles des sous-arbres correspondants. Si le taux d'erreur du sous-arbre (nœud parent) est inférieur à celui des feuilles, alors on élague le sous-arbre par une feuille.
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+\multicolumn{2}{| c |}{Test 1} & \multicolumn{2}{c |}{Test 2} \\
+\hline
+Précision             & Temps  & Précision             & Temps \\
+\hline
+0.8469 ($\pm$ 0.0179) & 54s    & 0.8481 ($\pm$ 0.0157) & 53s\\
+\hline
+\end{tabular}
+\caption{Résultats de CART avec 30 000 observations d'apprentissage}
+\end{table}
 
-\frame{
-\begin{algorithm}[H]
- \KwData{E objets mal classés, N observations}
- \KwResult{arbre}
- \While{sous-arbres à parcourir}{
-  erreur feuilles {$\leftarrow$} {$\sum_{}{} N \times U_{25}(E, N)$}\;
-  erreur nœud parent {$\leftarrow$} {$N' \times U_{25}'(E', N')$}\;
-  \eIf{erreur feuilles > erreur nœud parent}{
-   nœud parent {$\leftarrow$} feuille\;
-   }{nœud parent inchangé\;}
- }
- \caption{Élagage de l'algorithme C4.5}
-\end{algorithm}
-}
+\begin{table}[!h]
+\centering
+\begin{tabular}{| c | c | c | c |}
+\hline
+\multicolumn{2}{| c |}{Test 3} & \multicolumn{2}{c |}{Test 4} \\
+\hline
+Précision             & Temps  & Précision             & Temps \\
+\hline
+0.8180 ($\pm$ 0.0150) & 17s    & 0.8125 ($\pm$ 0.0155) & 17s\\
+\hline
+\end{tabular}
+\caption{Résultats de CART avec 10 000 observations d'apprentissage}
+\end{table}
+
+Les tableaux 3.1 et 3.2 montrent que K-NN a une précision comprise entre 0.93 et 0.96. Dans ce domaine, il peut être qualifié d'efficace car la probabilité de mal classer un chiffre reste faible. En revanche, le temps d'exécution de l'algorithme devient relativement long lorsque le nombre d'échantillon d'apprentissage est grand : il faut entre quinze et vingt minutes pour classer le jeu de données de test suivant la taille de celui d'apprentissage. Par ailleurs, il est intéressant de noter que la précision de l'algorithme ne diminue pas avec la taille de l'échantillon de test puisque celui-ci se base principalement sur les attributs du jeu de données et non sa taille. Avec une distance fixe entre les voisins, la précision de l'algorithme ne varie donc pas en fonction de la taille de l'échantillon de test. Les résultats de CART montrent un temps d'exécution beaucoup plus court que K-NN, en revanche, la précision est plus faible. La plus haute précision est à 0.84 tandis que la plus basse, 0.81.
+
+\section{Choix de l'algorithme}
+Les deux algorithmes peuvent être fondamentalement préférés. L'un permet d'avoir une solution rapidement tandis que l'autre apporte une précision plus fine. Dans le cadre d'une détection de numéros étudiants d'une promotion, qui est composée de cent étudiants dans ce document, l'algorithme devrait être intégré à une solution qui permettrait de faire plus que reconnaître les chiffres. Que ce soit pour corriger automatiquement ou agréger des exercices entre eux, on peut considérer le fait qu'un tel outil est créé afin d'accélérer la correction des examens papiers. C'est pourquoi avoir un algorithme prenant un peu plus de temps qu'un autre mais qui est plus précis semble plus pertinent pour le correcteur. Dans ce cas, K-NN est l'algorithme à retenir avec $k = 3$. Cette valeur de $k$ a été choisie car c'est avec celle-ci que la précision de l'algorithme est la plus grande tout en prenant en compte l'\textit{overfitting}.
