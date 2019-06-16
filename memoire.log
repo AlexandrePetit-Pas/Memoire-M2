@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  16 JUN 2019 10:06
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  16 JUN 2019 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1602,7 +1602,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 90--173
+Underfull \hbox (badness 10000) in paragraph at lines 90--171
 
  []
 
@@ -1667,7 +1667,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 ] [26
 
 ]
-Overfull \hbox (11.47571pt too wide) in paragraph at lines 192--192
+Overfull \hbox (11.47571pt too wide) in paragraph at lines 190--190
 []\TU/Lato(0)/m/sc/12 Jorge Moraleda. “Gregory Shakhnarovich, Trevor Darrell an
 d Piotr Indyk : Nearest-
  []
