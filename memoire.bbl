@@ -73,6 +73,27 @@
     \field{year}{2000}
   \endentry
 
+  \entry{induction_dt}{article}{}
+    \name{author}{1}{}{%
+      {{hash=QJR}{%
+         family={Quinlan},
+         familyi={Q\bibinitperiod},
+         given={J.\bibnamedelima Ross},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QJR1}
+    \strng{fullhash}{QJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{81\bibrangedash 106}
+    \field{title}{Induction of Decision Trees}
+    \field{volume}{1}
+    \field{journaltitle}{Machine Learning}
+    \field{year}{1986}
+  \endentry
+
   \entry{ant_colony}{book}{}
     \name{author}{1}{}{%
       {{hash=KJ}{%

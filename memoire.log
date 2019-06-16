@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  16 JUN 2019 10:15
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2019.4.21)  16 JUN 2019 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1427,7 +1427,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-) [5] (./chapitres/chapitre1.tex [6]
+[5]) (./chapitres/chapitre1.tex [6]
 Chapitre 1.
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 3.
 (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
@@ -1439,15 +1439,13 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) [7
 
-]
+] [8]
 
 LaTeX Font Warning: Font shape `TU/Lato(0)/m/sc' undefined
 (Font)              using `TU/Lato(0)/m/n' instead on input line 97.
 
-[8]
 File: img/decision_tree_meteo.png Graphic file (type bmp)
 <img/decision_tree_meteo.png>
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1477,38 +1475,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 154--156
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 [12]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 210.
+               Default added (so using `tbp') on input line 212.
 
 File: img/overfitting.png Graphic file (type bmp)
 <img/overfitting.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
@@ -1520,6 +1518,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
 [14]
 Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
@@ -1672,9 +1675,9 @@ Overfull \hbox (11.47571pt too wide) in paragraph at lines 190--190
 d Piotr Indyk : Nearest-
  []
 
-[27] [28
+[27] [28] (./memoire.toc [29
 
-] (./memoire.toc [29])
+])
 \tf@toc=\write5
 \openout5 = `memoire.toc'.
 
@@ -1700,11 +1703,11 @@ Package logreq Info: Writing requests to 'memoire.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44108 strings out of 492933
- 1031537 string characters out of 6136537
- 1415144 words of memory out of 5000000
- 47471 multiletter control sequences out of 15000+600000
- 543098 words of font info for 91 fonts, out of 8000000 for 9000
+ 44113 strings out of 492933
+ 1031679 string characters out of 6136537
+ 1414508 words of memory out of 5000000
+ 47474 multiletter control sequences out of 15000+600000
+ 543106 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,16n,96p,1162b,6419s stack positions out of 5000i,500n,10000p,200000b,80000s
 
