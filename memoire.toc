@@ -1,6 +1,8 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {french}{}
 \defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introduction}{5}% 
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Concepts formels}{7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}1.1}Introduction}{7}% 
@@ -62,5 +64,7 @@
 \contentsline {section}{\numberline {\color {red}3.4}Analyse des résultats}{23}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {\color {red}3.5}Choix de l'algorithme}{24}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusion}{25}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Bibliographie}{27}% 
